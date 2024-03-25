@@ -26,7 +26,7 @@ function Header() {
           </div>
         </div>
         <div className="flex gap-0 self-start mt-4 text-xs leading-4 whitespace-nowrap">
-          <div className="flex flex-col px-2 py-4">
+          {/* <div className="flex flex-col px-2 py-4">
             <button type="button">
               <img
                 loading="lazy"
@@ -36,7 +36,7 @@ function Header() {
               />
             </button>
             <div className="mt-1.5">Buscar</div>
-          </div>
+          </div> */}
           <Link
             href={
               "https://www.google.com/maps/place/Seminuevos+Sabo+motors/@19.3098449,-98.9015293,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce1e5de457288b:0x9fa91922d1bbdb70!8m2!3d19.3098449!4d-98.9015293!16s%2Fg%2F11f31341m0?entry=ttu"
