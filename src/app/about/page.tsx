@@ -1,80 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
+import Header from "@/components/header";
 import React from "react";
-const navItems = [
-  "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea0e59f68773704732dc3561b5fa82419c2d35d086d7a60909941d0c34fe3c8?apiKey=fb5c2b8017bc47e8a9bedce003f68527&",
-  "https://cdn.builder.io/api/v1/image/assets/TEMP/a35111c05c77a927dad0ab86c1c180f37e3586dbcb0bf1df8120a633c9985181?apiKey=fb5c2b8017bc47e8a9bedce003f68527&",
-  "https://cdn.builder.io/api/v1/image/assets/TEMP/9507feadcb1e62bd42a9f1e6f273645b9cb0359b2caad2287bf0a8e4057d3a1e?apiKey=fb5c2b8017bc47e8a9bedce003f68527&",
-];
+const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 
 function About() {
   return (
     <div className="flex flex-col self-stretch bg-white">
-      <header className="flex flex-col px-5 pt-2 pb-8 w-full text-white bg-gray-900 shadow-sm max-md:max-w-full">
-        <nav className="flex gap-5 justify-between mt-2.5 w-full text-center max-md:flex-wrap max-md:max-w-full">
-          <div className="flex gap-5 text-sm font-bold leading-4 uppercase max-md:flex-wrap">
-            <Image
-              loading="lazy"
-              src="/omodaixt.png"
-              alt="Logo"
-              className="flex-1 shrink-0 w-full rounded"
-              width={300}
-              height={300}
-            />
-            <div className="flex gap-4 px-2 py-px my-auto">
-              <Link href={"/"}>Inicio</Link>
-              <Link href={"/about"}>Descubre Omoda</Link>
-              <Link href={"/manual"}>Manuales</Link>
-            </div>
-          </div>
-          <div className="flex gap-0 self-start mt-4 text-xs leading-4 whitespace-nowrap">
-            <div className="flex flex-col px-2 py-4">
-              <button type="button">
-                <img
-                  loading="lazy"
-                  src={navItems[0]}
-                  alt=""
-                  className="self-center aspect-square w-[30px]"
-                />
-              </button>
-              <div className="mt-1.5">Buscar</div>
-            </div>
-            <Link
-              href={
-                "https://www.google.com/maps/place/Omoda+Jaecoo+Ixtapaluca/@19.3112835,-98.8995671,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce1fac51e021e7:0xd57f0702bb2b0349!8m2!3d19.3112785!4d-98.8969922!16s%2Fg%2F11l32j613z?entry=ttu"
-              }
-              className="flex flex-col px-2 py-4"
-            >
-              <button type="button">
-                <img
-                  loading="lazy"
-                  src={navItems[1]}
-                  alt=""
-                  className="self-center aspect-square w-[30px]"
-                />
-              </button>
-              <div className="mt-1.5">Localizar</div>
-            </Link>
-            <Link
-              href={
-                "https://www.facebook.com/OmodaIxtapaluca/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"
-              }
-              className="flex flex-col px-2 py-4"
-            >
-              <button type="button">
-                <img
-                  loading="lazy"
-                  src={navItems[2]}
-                  alt=""
-                  className="self-center aspect-square w-[30px]"
-                />
-              </button>
-              <div className="mt-1.5">Redes</div>
-            </Link>
-          </div>
-        </nav>
-      </header>
-      <Image src={"/omodaabout.webp"} alt="omoda" width={1920} height={1080} />
+      <Header />
+      <div className="mt-20">
+        <p className="font-serif text-2xl text-center font-bold">
+          En Sabo Motor ponemos los mejores autos de sus marcas confianza en su
+          viaje automotriz, brindando asesoramiento experto, recursos educativos
+          y un servicio excepcional en todo momento. Nos esforzamos por
+          construir relaciones a largo plazo con cada cliente, basadas en la
+          honestidad, la integridad y el respeto mutuo. En resumen, nuestra
+          misión es simple pero poderosa: poner a nuestros clientes en primer
+          lugar en todo lo que hacemos. Porque creemos que cuando ustedes tienen
+          éxito, nosotros también lo hacemos. Su satisfacción y confianza son
+          nuestra mayor recompensa, y trabajamos incansablemente para merecerlas
+          cada día.
+        </p>
+      </div>
     </div>
   );
 }
