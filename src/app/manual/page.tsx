@@ -13,7 +13,7 @@ function Manual() {
   return (
     <div className="flex flex-col self-stretch bg-white">
       <Header />
-      <div className="flex flex-row">
+      <div className="flex flex-col">
         <div className="p-8">
           <Image
             src={"/hyundaiaccent2018v2-resized.png"}
