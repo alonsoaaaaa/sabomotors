@@ -247,7 +247,7 @@ const VehicleCatalog: React.FC = () => {
               className=" ml-5 max-w-full aspect-[1.49] w-[300px] max-md:ml-2.5"
             />
             <div className="justify-center py-1.5 text-xs font-bold leading-3 text-white whitespace-nowrap bg-sky-600 rounded border border-white border-solid">
-              Eléctrico
+              Últimas novedades
             </div>
             <h3 className="text-sm">Enganche desde $6000</h3>
             <Link
