@@ -8,16 +8,12 @@ function About() {
       <Header />
       <div className="mt-20">
         <p className="font-serif text-2xl text-center font-bold">
-          En Sabo Motor ponemos los mejores autos de sus marcas confianza en su
-          viaje automotriz, brindando asesoramiento experto, recursos educativos
-          y un servicio excepcional en todo momento. Nos esforzamos por
-          construir relaciones a largo plazo con cada cliente, basadas en la
-          honestidad, la integridad y el respeto mutuo. En resumen, nuestra
-          misión es simple pero poderosa: poner a nuestros clientes en primer
-          lugar en todo lo que hacemos. Porque creemos que cuando ustedes tienen
-          éxito, nosotros también lo hacemos. Su satisfacción y confianza son
-          nuestra mayor recompensa, y trabajamos incansablemente para merecerlas
-          cada día.
+          Crédito en seminuevos auditados, seriedad y confianza a un precio
+          competitivo. Comprometidos con la mejora continua y la protección de
+          tu patrimonio. En Sabo Motor ponemos los mejores autos de sus marcas
+          confianza en su viaje automotriz, brindando asesoramiento experto. Nos
+          esforzamos por construir relaciones a largo plazo con cada cliente,
+          basadas en la honestidad, la integridad y el respeto mutuo.
         </p>
       </div>
     </div>

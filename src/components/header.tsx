@@ -21,7 +21,7 @@ function Header() {
             <h1 className="font-bold text-base">Ixtapaluca</h1>
           </Link>
 
-          <div className="flex gap-4 px-2 py-px my-auto">
+          <div className="flex flex-col gap-4 md:flex-row px-2 py-px my-auto ">
             <Link href={"/"}>
               {" "}
               <Button variant="link" className="text-white text-large">
@@ -31,7 +31,7 @@ function Header() {
             <Link href={"/about"}>
               {" "}
               <Button variant="link" className="text-white text-large">
-                DESCUBRE SABO MOTORS
+                NOSOTROS
               </Button>
             </Link>
             <Link href={"/manual"}>
@@ -78,7 +78,6 @@ function Header() {
               alt=""
               className="self-center aspect-square w-[30px]"
             />
-
             <div className="mt-1.5">Redes</div>
           </Link>
         </div>
