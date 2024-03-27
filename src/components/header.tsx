@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 
 function Header() {
@@ -8,7 +9,7 @@ function Header() {
     <header className="flex flex-col px-5 pt-2 pb-6 w-full text-white bg-gray-900 shadow-sm max-md:max-w-full">
       <nav className="flex gap-5 justify-between mt-2.5 w-full text-center max-md:flex-wrap max-md:max-w-full">
         <div className="flex gap-5 text-sm font-bold leading-4 uppercase max-md:flex-wrap">
-          <div>
+          <Link href={"/"}>
             <Image
               loading="lazy"
               src="/sabomotors.png"
@@ -18,11 +19,27 @@ function Header() {
               height={120}
             />
             <h1 className="font-bold text-base">Ixtapaluca</h1>
-          </div>
+          </Link>
+
           <div className="flex gap-4 px-2 py-px my-auto">
-            <Link href={"/"}>Inicio</Link>
-            <Link href={"/about"}>Descubre Sabo Motors</Link>
-            <Link href={"/manual"}>Manuales</Link>
+            <Link href={"/"}>
+              {" "}
+              <Button variant="link" className="text-white text-large">
+                INICIO
+              </Button>
+            </Link>
+            <Link href={"/about"}>
+              {" "}
+              <Button variant="link" className="text-white text-large">
+                DESCUBRE SABO MOTORS
+              </Button>
+            </Link>
+            <Link href={"/manual"}>
+              {" "}
+              <Button variant="link" className="text-white text-large">
+                MANUALES
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="flex gap-0 self-start mt-4 text-xs leading-4 whitespace-nowrap">
@@ -43,28 +60,25 @@ function Header() {
             }
             className="flex flex-col px-2 py-4"
           >
-            <button type="button">
-              <img
-                loading="lazy"
-                src={navItems[1]}
-                alt=""
-                className="self-center aspect-square w-[30px]"
-              />
-            </button>
+            <img
+              loading="lazy"
+              src={navItems[1]}
+              alt=""
+              className="self-center aspect-square w-[30px]"
+            />
             <div className="mt-1.5">Ubicación</div>
           </Link>
           <Link
             href={"https://www.facebook.com/seminuevossabomotors"}
             className="flex flex-col px-2 py-4"
           >
-            <button type="button">
-              <img
-                loading="lazy"
-                src={navItems[2]}
-                alt=""
-                className="self-center aspect-square w-[30px]"
-              />
-            </button>
+            <img
+              loading="lazy"
+              src={navItems[2]}
+              alt=""
+              className="self-center aspect-square w-[30px]"
+            />
+
             <div className="mt-1.5">Redes</div>
           </Link>
         </div>

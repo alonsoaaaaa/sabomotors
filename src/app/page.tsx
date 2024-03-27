@@ -145,7 +145,7 @@ const VehicleCatalog: React.FC = () => {
               }}
             >
               {" "}
-              Vehículos eléctricos
+              Vehículos híbridos
             </Button>
           </div>
         </div>

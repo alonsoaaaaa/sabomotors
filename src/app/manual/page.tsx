@@ -20,7 +20,7 @@ function Manual() {
             alt=""
             width={1000}
             height={400}
-            className="rounded"
+            className="rounded pl-[9vw]"
           ></Image>
           <Link
             href={
@@ -37,7 +37,7 @@ function Manual() {
             alt=""
             width={1000}
             height={400}
-            className="rounded"
+            className="rounded pl-[9vw]"
           ></Image>
           <Link
             className="flex flex-col px-2 py-4"
