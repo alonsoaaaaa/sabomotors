@@ -82,17 +82,17 @@ const VehicleCatalog: React.FC = () => {
         <div className="flex overflow-hidden relative flex-col justify-center items-center px-16 py-9 w-full min-h-[280px] max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
-            src="./bannersabomotors2.jpg"
+            src="./omodabanner4.jpg"
             alt=""
             className="absolute inset-0 w-full h-full object-center"
           />
           <div className="flex relative flex-col px-8 pt-8 pb-8 max-md:px-5 max-md:max-w-full">
-            <h1 className="self-center text-6xl font-bold uppercase leading-[54.45px] max-md:max-w-full max-md:text-4xl">
-              Catálogo Sabo Motors
+            <h1 className="text-gray-300 self-center text-6xl font-bold uppercase leading-[54.45px] max-md:max-w-full max-md:text-4xl">
+              Catálogo Auto Mars
             </h1>
             <p className="mt-6 text-base leading-6 max-md:max-w-full">
               Descarga un catálogo y descubre todos los detalles de nuestra gama
-              de vehículos Sabo Motors.
+              de vehículos Auto Mars.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ const VehicleCatalog: React.FC = () => {
                   </div>
                   <Link
                     href={
-                      "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                      "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
                     }
                     className="self-center py-px mt-6 ml-36 text-xs leading-3 text-center text-black border-b-2 border-yellow-400 border-solid"
                   >
@@ -183,7 +183,7 @@ const VehicleCatalog: React.FC = () => {
                             <VehicleCard {...vehicleCards[2]} />
                             <Link
                               href={
-                                "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                                "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
                               }
                               className="justify-center py-px mt-6 text-xs leading-3 text-center border-b-2 border-yellow-400 border-solid"
                             >
@@ -197,7 +197,7 @@ const VehicleCatalog: React.FC = () => {
                             <VehicleCard {...vehicleCards[3]} />
                             <Link
                               href={
-                                "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                                "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
                               }
                               className="justify-center py-px mt-6 text-xs leading-3 text-center border-b-2 border-yellow-400 border-solid"
                             >
@@ -216,7 +216,7 @@ const VehicleCatalog: React.FC = () => {
                     <VehicleCard {...vehicleCards[4]} />
                     <Link
                       href={
-                        "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                        "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
                       }
                       className="justify-center py-px mt-6 text-xs text-center border-b-2 border-yellow-400 border-solid"
                     >
@@ -225,7 +225,7 @@ const VehicleCatalog: React.FC = () => {
                     <VehicleCard {...vehicleCards[5]} />
                     <Link
                       href={
-                        "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                        "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
                       }
                       className="justify-center py-px mt-6 text-xs text-center border-b-2 border-yellow-400 border-solid"
                     >
@@ -252,7 +252,7 @@ const VehicleCatalog: React.FC = () => {
             <h3 className="text-sm">Enganche desde $6000</h3>
             <Link
               href={
-                "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
+                "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
               }
               className="justify-center py-px mt-5 text-xs leading-3 text-center text-black border-b-2 border-yellow-400 border-solid max-md:mt-10"
             >
@@ -300,7 +300,7 @@ const VehicleCatalog: React.FC = () => {
             <div className="max-md:max-w-full">Cookies</div>
           </div>
           <div className="my-auto text-xs font-bold leading-3 capitalize">
-            © Sabo Motors 2024
+            © Auto Mars 2024
           </div>
         </div>
       </footer>
