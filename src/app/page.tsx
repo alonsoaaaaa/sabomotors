@@ -91,7 +91,7 @@ const VehicleCatalog: React.FC = () => {
               Catálogo Auto Mars
             </h1>
             <p className="mt-6 text-base leading-6 max-md:max-w-full">
-              Descarga un catálogo y descubre todos los detalles de nuestra gama
+              Revisa el catálogo y descubre todos los detalles de nuestra gama
               de vehículos Auto Mars.
             </p>
           </div>
