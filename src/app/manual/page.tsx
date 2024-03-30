@@ -8,7 +8,7 @@ import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 function Manual() {
   let [carQuery, setCarQuery] = useState("");
-  let carNames = ["hyundai accent", "mercedes mi 350", "beat itz"];
+  let carNames = ["hyundai accent", "mercedes ml 350", "beat itz"];
   return (
     <div className="flex flex-col self-stretch bg-white">
       <Header />
@@ -19,7 +19,7 @@ function Manual() {
             placeholder="Nombre del vehículo..."
             onChange={(e) => {
               setCarQuery(e.target.value);
-              console.log(carQuery);
+              // console.log(carQuery);
             }}
           />
           <Button variant="outline" className="ml-1">
@@ -63,10 +63,10 @@ function Manual() {
             <Link
               className="flex flex-col px-2 py-4"
               href={
-                "https://my.gm.com.mx/content/dam/gmownercenter/gmna/gmmx/dynamic/manuals/2020/chevrolet/beat/es/Chevrolet_2020_beat.pdf"
+                "https://www.mbusa.com/content/dam/mb-nafta/us/owners/manuals/2014/operators/MY14_M-Class_Operator.pdf"
               }
             >
-              <Button className="w-[50vw] self-center">Mercedes MI 350</Button>
+              <Button className="w-[50vw] self-center">Mercedes ML 350</Button>
             </Link>
           </div>
         ) : null}
