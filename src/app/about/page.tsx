@@ -6,7 +6,10 @@ const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 // import backgroundImage from "@/Automars_bg.jpg";
 
 function About() {
-  const isSmallDevice = window?.innerWidth <= 600;
+  let isSmallDevice = true;
+  if (typeof window !== "undefined") {
+    isSmallDevice = window.innerWidth <= 600;
+  }
   const mainClasses = "flex h-[35vh] sm:h-[80vh] w-auto bg-cover bg-no-repeat";
   const totalClasses = isSmallDevice ? " small-device-background" : "";
   return (
