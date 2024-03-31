@@ -21,9 +21,9 @@ function About() {
         className={mainClasses + totalClasses}
         style={{ backgroundImage: `url(/Automars_bg2.png)` }}
       >
-        <div className="mt-10">
+        <div className="mt-10 md:mt-28">
           <p className="font-sans text-xl  text-center sm:text-2xl font-bold sm:text-gray-100 self-center shrink-0 sm:shrink sm:mb-12">
-            En Auto Mars ponemos a tu disposicion autos de las mejores marcas,
+            En Auto Mars ponemos a tu disposición autos de las mejores marcas,
             con la confianza de que cada uno de ellos ha sido auditado y
             revisado por nuestros expertos. Tambien compramos tu auto usado,
             para que puedas renovar tu vehículo con nosotros. Las opciones de
