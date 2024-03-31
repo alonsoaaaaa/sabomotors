@@ -31,7 +31,7 @@ function About() {
         style={{ backgroundImage: `url(/Automars_bg.jpg)` }}
       >
         <div className="mt-36  sm:mt-0">
-          <p className="font-sans sm:text-2xl text-center font-bold sm:text-gray-200 self-center">
+          <p className="font-sans text-base sm:text-2xl text-center font-bold sm:text-gray-200 self-center">
             En Auto Mars ponemos a tu disposicion autos de las mejores marcas,
             con la confianza de que cada uno de ellos ha sido auditado y
             revisado por nuestros expertos. Tambien compramos tu auto usado,

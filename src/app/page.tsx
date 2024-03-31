@@ -164,17 +164,18 @@ const VehicleCatalog: React.FC = () => {
 
                       <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                         <VehicleCard {...vehicleCards[1]} />
+                        <Link
+                          href={
+                            "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
+                          }
+                          className="self-start py-px mt-6 text-xs leading-3 text-center text-black border-b-2 border-yellow-400 border-solid"
+                        >
+                          Ver catálogo
+                        </Link>
                       </div>
                     </div>
                   </div>
-                  <Link
-                    href={
-                      "https://www.google.com/maps/uv?pb=!1s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c!3m1!7e115!4s%2Fmaps%2Fplace%2Fautomars%2Bixtapaluca%2F%4019.3118736%2C-98.8994787%2C3a%2C75y%2C300.56h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sMMYuIFsFOnEQUyYv7O42wg*212e0*214m2*213m1*211s0x85ce1fc4f9f3f5d9%3A0x41de5a480815b76c%3Fsa%3DX%26ved%3D2ahUKEwjf7Nr3y5qFAxUPLkQIHTuxDhQQpx96BAgQEAA!5sautomars%20ixtapaluca%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipP2cg_b9zStRqjtxUHEhhBAOO7mYns9hW_M_z6a&hl=en&ved=1t%3A206134&ictx=111"
-                    }
-                    className="self-center py-px mt-6 ml-36 text-xs leading-3 text-center text-black border-b-2 border-yellow-400 border-solid"
-                  >
-                    Ver catálogo
-                  </Link>
+
                   {carType === "particular" && (
                     <div className="mt-6 max-md:max-w-full">
                       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
