@@ -44,7 +44,7 @@ function Manual() {
               className="flex flex-col px-2 py-4"
             >
               <Button className="w-[50vw] self-center">
-                Hyundai Accent 2018 Mid
+                Hyundai Accent 2018
               </Button>
             </Link>
           </div>
@@ -88,7 +88,7 @@ function Manual() {
               }
             >
               <Button className="w-[50vw] self-center">
-                Beat Itz 2019 Estándar
+                Beat Itz 2019 Std
               </Button>
             </Link>
           </div>

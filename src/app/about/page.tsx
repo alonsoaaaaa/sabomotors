@@ -9,29 +9,20 @@ const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 function About() {
   let isSmallDevice = true;
   if (typeof window !== "undefined") {
-    isSmallDevice = window.innerWidth <= 600;
+    isSmallDevice = window.innerWidth <= 800;
   }
-  const mainClasses =
-    "flex flex-col h-[35vh] sm:h-[80vh] w-auto bg-cover bg-no-repeat justify-center";
+  const mainClasses = "flex flex-col bg-cover bg-no-repeat justify-center"; // past classes: h-[35vh] sm:h-[80vh].
+  //NOTA: Aquí estaba creciendo porque le puse h-[35vh] sm:h-[80vh]
   const totalClasses = isSmallDevice ? " small-device-background" : "";
   return (
     <div className="flex flex-col self-stretch bg-white">
       <Header />
-      {/* El header, como no esta dentro de un div no bloquea el componente */}
-      {/* <p className="font-serif text-2xl text-center font-bold">
-          Crédito en seminuevos auditados, seriedad y confianza a un precio
-          competitivo. Comprometidos con la mejora continua y la protección de
-          tu patrimonio. En Sabo Motor ponemos los mejores autos de sus marcas
-          confianza en su viaje automotriz, brindando asesoramiento experto. Nos
-          esforzamos por construir relaciones a largo plazo con cada cliente,
-          basadas en la honestidad, la integridad y el respeto mutuo.
-        </p> */}
       <div
         className={mainClasses + totalClasses}
-        style={{ backgroundImage: `url(/Automars_bg.jpg)` }}
+        style={{ backgroundImage: `url(/Automars_bg2.png)` }}
       >
-        <div className="mt-36  sm:mt-0">
-          <p className="font-sans text-base sm:text-2xl text-center font-bold sm:text-gray-200 self-center">
+        <div className="mt-10">
+          <p className="font-sans text-xl  text-center sm:text-2xl font-bold sm:text-gray-100 self-center shrink-0 sm:shrink sm:mb-12">
             En Auto Mars ponemos a tu disposicion autos de las mejores marcas,
             con la confianza de que cada uno de ellos ha sido auditado y
             revisado por nuestros expertos. Tambien compramos tu auto usado,
@@ -41,7 +32,7 @@ function About() {
             Ixtapaluca, Estado de Mexico.
           </p>
         </div>
-        <div className="flex flex-wrap self-center justify-center">
+        <div className="flex flex-wrap self-center justify-center sm:mb-28">
           <Image
             src="/Ford_logo_flat.svg"
             alt="Ford"
