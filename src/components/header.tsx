@@ -12,12 +12,11 @@ function Header() {
         <div className="self-center">
           <Link href={"/"}>
             <Image
-              loading="lazy"
-              src="/Automars.png"
+              src="/sabomotors.png"
               alt="Logo"
               className="rounded"
-              width={300}
-              height={300}
+              width={100}
+              height={100}
             />
             <h1 className="font-bold text-base text-center">Ixtapaluca</h1>
           </Link>
@@ -46,9 +45,9 @@ function Header() {
         <div className="flex gap-0 self-center mt-4 text-xs sm:ml-auto leading-4 whitespace-nowrap">
           <Link
             href={
-              "https://www.google.com/maps/place/AutoMars/@19.3119498,-98.9021813,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce1fc4f9f3f5d9:0x41de5a480815b76c!8m2!3d19.3119448!4d-98.8996064!16s%2Fg%2F11fcq24bc_?entry=ttu"
+              "https://www.google.com/maps/place/Seminuevos+Sabo+motors/@19.3098449,-98.9041042,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce1e5de457288b:0x9fa91922d1bbdb70!8m2!3d19.3098449!4d-98.9015293!16s%2Fg%2F11f31341m0?entry=ttu"
             }
-            className="flex flex-col px-2"
+            className="flex flex-col px-2 self-center"
           >
             <img
               loading="lazy"
@@ -59,9 +58,7 @@ function Header() {
             <div className="mt-1.5">Ubicación</div>
           </Link>
           <Link
-            href={
-              "https://www.google.com/search?q=auto+mars&sca_esv=40a7f3b289392aea&sca_upv=1&sxsrf=ACQVn09DHph7GbxqmlX51mEzfRDTXMoGrg%3A1711755216751&ei=0E8HZujHLfqckPIP5Lqi8Ao&ved=0ahUKEwjo74uN0ZqFAxV6DkQIHWSdCK4Q4dUDCBA&uact=5&oq=auto+mars&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWF1dG8gbWFyczIKECMYgAQYigUYJzIIEAAYgAQYywEyCBAAGIAEGMsBMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKSJ8KUOQCWOQCcAF4AZABAJgBmgGgAZoBqgEDMC4xuAEDyAEA-AEBmAICoAKlAcICChAAGEcY1gQYsAOYAwCIBgGQBgiSBwMxLjGgB-QH&sclient=gws-wiz-serp#lrd=0x85ce1fc4f9f3f5d9:0x41de5a480815b76c,1,,,,"
-            }
+            href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
             className="flex flex-col px-2"
           >
             <img
@@ -70,7 +67,7 @@ function Header() {
               alt=""
               className="self-center aspect-square w-[30px]"
             />
-            <div className="mt-1.5">Reviews</div>
+            <div className="mt-1.5">Redes</div>
           </Link>
         </div>
       </div>

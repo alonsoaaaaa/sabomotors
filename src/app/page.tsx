@@ -82,17 +82,17 @@ const VehicleCatalog: React.FC = () => {
         <div className="flex overflow-hidden relative flex-col justify-center items-center px-16 py-9 w-full min-h-[280px] max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
-            src="./omodabanner4.jpg"
+            src="./bannersabomotors2.jpg"
             alt=""
             className="absolute inset-0 w-full h-full object-center"
           />
           <div className="flex relative flex-col px-8 pt-8 pb-8 max-md:px-5 max-md:max-w-full">
             <h1 className="text-gray-300 self-center text-6xl font-bold uppercase leading-[54.45px] max-md:max-w-full max-md:text-4xl">
-              Catálogo Auto Mars
+              Catálogo Sabo Motors
             </h1>
             <p className="mt-6 text-base leading-6 max-md:max-w-full">
               Revisa el catálogo y descubre todos los detalles de nuestra gama
-              de vehículos Auto Mars.
+              de vehículos Sabo Motors.
             </p>
           </div>
         </div>
@@ -301,7 +301,7 @@ const VehicleCatalog: React.FC = () => {
             <div className="max-md:max-w-full">Cookies</div>
           </div>
           <div className="my-auto text-xs font-bold leading-3 capitalize">
-            © Auto Mars 2024
+            © Sabo Motors 2024
           </div>
         </div>
       </footer>

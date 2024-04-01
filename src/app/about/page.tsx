@@ -19,17 +19,17 @@ function About() {
       <Header />
       <div
         className={mainClasses + totalClasses}
-        style={{ backgroundImage: `url(/Automars_bg2.png)` }}
+        style={{ backgroundImage: `url(/localsabomotors.jpg)` }}
       >
         <div className="mt-10 md:mt-28">
           <p className="font-sans text-xl  text-center sm:text-2xl font-bold sm:text-gray-100 self-center shrink-0 sm:shrink sm:mb-12">
-            En Auto Mars ponemos a tu disposición autos de las mejores marcas,
-            con la confianza de que cada uno de ellos ha sido auditado y
-            revisado por nuestros expertos. Tambien compramos tu auto usado,
-            para que puedas renovar tu vehículo con nosotros. Las opciones de
-            consignacion y financiamiento estan disponibles para que puedas
-            llevar tu auto favorito a casa. Visitanos en nuestro local en
-            Ixtapaluca, Estado de Mexico.
+            En Sabo Motors le brindamos crédito en seminuevos auditados,
+            seriedad y confianza a un precio competitivo. Comprometidos con la
+            mejora continua y la protección de tu patrimonio. En Sabo Motor
+            ponemos los mejores autos de sus marcas confianza en su viaje
+            automotriz, brindando asesoramiento experto. Nos esforzamos por
+            construir relaciones a largo plazo con cada cliente, basadas en la
+            honestidad, la integridad y el respeto mutuo.
           </p>
         </div>
         <div className="flex flex-wrap self-center justify-center sm:mb-28">
