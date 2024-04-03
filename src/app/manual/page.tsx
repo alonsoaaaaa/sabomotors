@@ -29,13 +29,13 @@ function Manual() {
         {carNames[0]
           .toLocaleLowerCase()
           .includes(carQuery.toLocaleLowerCase()) ? (
-          <div className="p-8">
+          <div className="p-8 flex flex-col items-center">
             <Image
               src={"/hyundaiaccent2018v2-resized.png"}
               alt=""
-              width={1000}
+              width={600}
               height={400}
-              className="rounded pl-[9vw]"
+              className="rounded"
             ></Image>
             <Link
               href={
@@ -43,43 +43,43 @@ function Manual() {
               }
               className="flex flex-col px-2 py-4"
             >
-              <Button className="w-[50vw] self-center">
-                Hyundai Accent 2018
-              </Button>
+              <Button className="w-fit self-center">Hyundai Accent 2018</Button>
             </Link>
           </div>
         ) : null}
         {carNames[1]
           .toLocaleLowerCase()
           .includes(carQuery.toLocaleLowerCase()) ? (
-          <div className="p-8">
-            <Image
-              src={"/4-2-car-png-hd.png"}
-              alt=""
-              width={1000}
-              height={400}
-              className="rounded pl-[9vw]"
-            ></Image>
-            <Link
-              className="flex flex-col px-2 py-4"
-              href={
-                "https://www.mbusa.com/content/dam/mb-nafta/us/owners/manuals/2014/operators/MY14_M-Class_Operator.pdf"
-              }
-            >
-              <Button className="w-[50vw] self-center">Mercedes ML 350</Button>
-            </Link>
+          <div className="p-8 flex flex-col items-center">
+            <div>
+              <Image
+                src={"/4-2-car-png-hd.png"}
+                alt=""
+                width={600}
+                height={400}
+                className="rounded"
+              ></Image>
+              <Link
+                className="flex flex-col px-2 py-4"
+                href={
+                  "https://www.mbusa.com/content/dam/mb-nafta/us/owners/manuals/2014/operators/MY14_M-Class_Operator.pdf"
+                }
+              >
+                <Button className="w-fit self-center">Mercedes ML 350</Button>
+              </Link>
+            </div>
           </div>
         ) : null}
         {carNames[2]
           .toLocaleLowerCase()
           .includes(carQuery.toLocaleLowerCase()) ? (
-          <div className="p-8">
+          <div className="p-8 flex flex-col items-center">
             <Image
               src={"/beatitz2019.png"}
               alt=""
-              width={1000}
+              width={600}
               height={400}
-              className="rounded pl-[9vw]"
+              className="rounded"
             ></Image>
             <Link
               className="flex flex-col px-2 py-4"
@@ -87,9 +87,7 @@ function Manual() {
                 "https://my.gm.com.mx/content/dam/gmownercenter/gmna/gmmx/dynamic/manuals/2020/chevrolet/beat/es/Chevrolet_2020_beat.pdf"
               }
             >
-              <Button className="w-[50vw] self-center">
-                Beat Itz 2019 Std
-              </Button>
+              <Button className="w-fit self-center">Beat Itz 2019 Std</Button>
             </Link>
           </div>
         ) : null}

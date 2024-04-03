@@ -29,16 +29,16 @@ function Header() {
               INICIO
             </Button>
           </Link>
-          <Link href={"/about"}>
-            {" "}
-            <Button variant="link" className="text-white text-large py-1">
-              NOSOTROS
-            </Button>
-          </Link>
           <Link href={"/manual"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
               MANUALES
+            </Button>
+          </Link>
+          <Link href={"/about"}>
+            {" "}
+            <Button variant="link" className="text-white text-large py-1">
+              NOSOTROS
             </Button>
           </Link>
         </div>
