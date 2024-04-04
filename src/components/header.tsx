@@ -23,19 +23,26 @@ function Header() {
         </div>
 
         <div className="flex flex-col self-center md:flex-row px-2 py-px my-auto sm:gap-4">
-          <Link href={"/"} className="text-center">
+          <Link className="text-center" href={"/"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
               INICIO
             </Button>
           </Link>
-          <Link href={"/manual"}>
+          <Link className="text-center" href={"/technical"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
-              MANUALES
+              FICHAS TÉCNICAS
             </Button>
           </Link>
-          <Link href={"/about"}>
+          <Link className="text-center" href={"/sell"}>
+            {" "}
+            <Button variant="link" className="text-white text-large py-1">
+              VÉNDENOS TU COCHE
+            </Button>
+          </Link>
+
+          <Link className="text-center" href={"/about"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
               NOSOTROS
