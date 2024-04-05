@@ -1,4 +1,29 @@
-const vehicles = [
+export const popularMakes = [
+  "Chevrolet",
+  "Nissan",
+  "Volkswagen",
+  "Ford",
+  "Honda",
+  "Toyota",
+  "BMW",
+  "Dodge",
+  "Kia",
+  "Mazda",
+  "Audi",
+  "Hyundai",
+  "Jeep",
+  "Suzuki",
+  "Cadillac",
+  "Chery",
+  "Fiat",
+  "Mercedes-Benz",
+  "Mitsubishi",
+  "Peugeot",
+  "Renault",
+  "Seat",
+];
+
+export const vehicles = [
   {
     id: 1,
     name: "Hyundai Accent Mid",
@@ -41,5 +66,3 @@ const vehicles = [
       "https://my.gm.com.mx/content/dam/gmownercenter/gmna/gmmx/dynamic/manuals/2020/chevrolet/beat/es/Chevrolet_2020_beat.pdf",
   },
 ];
-
-export default vehicles;

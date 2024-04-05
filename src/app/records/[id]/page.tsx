@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table, TableBody } from "@/components/ui/table";
 import CustomRow from "@/components/table-row";
-import vehicles from "@/utils/data";
+import { vehicles } from "@/utils/data";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "lucide-react";

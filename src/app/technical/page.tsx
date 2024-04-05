@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/header";
 import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import vehicles from "@/utils/data";
+import { vehicles } from "@/utils/data";
 function Technical() {
   let [carQuery, setCarQuery] = useState("");
   // let carNames = ["hyundai accent", "mercedes ml 350", "beat itz"];
