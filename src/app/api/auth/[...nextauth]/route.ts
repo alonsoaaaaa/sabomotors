@@ -5,7 +5,7 @@ import { PrismaClient } from "@prisma/client";
 const db = new PrismaClient();
 
 //This route handles the login page request to api/auth/login
-export const authOptions = {
+const authOptions = {
   //This is the configuration object that will be passed to NextAuth
   providers: [
     CredentialsProvider({
