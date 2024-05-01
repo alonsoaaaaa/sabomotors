@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
+
+model CarOffers {
+  id             Int      @id @default(autoincrement())
+  model          String
+  year           Int
+  mileage        Float?
+  make           String?
+  image          String[]
+  vin            String?
+  FactureType    String
+  insurance      String?
+  platenum       String?
+  contact_number String?
+  email          String
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+}
+
+model AvailableCars {
+  id          Int      @id @default(autoincrement())
+  model       String
+  price       String
+  downpayment String
+  make        String
+  image       String[]
+  FactureType String?
+  credit      String?
+  features    String?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+}
