@@ -71,9 +71,7 @@ function AddPage() {
       const response = await res.json(); //This is the response from the backend
       console.log("RESPUESTAAAAA:", response);
       const { email, contact_number } = response;
-      router.push(
-        `sell/success?email=${email}&contact_number=${contact_number}`
-      );
+      router.push(`sell/success`);
       reset();
     } catch (error) {
       console.error("Error al mandar los datos al BACK", error);

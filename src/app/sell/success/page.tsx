@@ -1,12 +1,11 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { CheckCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 
-function AddSucess({ email = "", contact_number = "" }) {
-  const searchParams = useSearchParams();
+function AddSucess() {
+  //const searchParams = useSearchParams();
   // const email = searchParams.get("email");
   // const contact_number = searchParams.get("contact_number");
   return (
@@ -15,18 +14,16 @@ function AddSucess({ email = "", contact_number = "" }) {
         El carro ha sido registrado correctamente
       </h1>
       <p className="text-2xl text-center">
-        En seguida enviaremos un correo a{" "}
-        <span className="font-bold">{email}</span> con el número de uno de
-        nuestros agentes para que puedas contactarlo
-        {contact_number ? (
-          <>
-            , o nos comunicaremos al número telefónico{" "}
-            {<span className="font-bold">{contact_number}</span>} que
-            proporcionaste.
-          </>
-        ) : (
+        En seguida enviaremos un correo a <span className="font-bold">{}</span>{" "}
+        con el número de uno de nuestros agentes para que puedas contactarlo
+        {/* {contact_number ? ( */}
+        <>
+          , o nos comunicaremos al número telefónico{" "}
+          {<span className="font-bold">{}</span>} que proporcionaste.
+        </>
+        {/* ) : (
           "."
-        )}
+        )} */}
       </p>
       <CheckCheckIcon size={100} color="green" />
       <Button>
