@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SelectValue,
   SelectTrigger,
@@ -7,20 +7,24 @@ import {
   Select,
 } from "@/components/ui/select";
 import { FormControl } from "./ui/form";
-import { popularMakes } from "@/utils/data";
-interface CustomSelectProps {
+import { Input } from "./ui/input";
+
+type CustomSelectProps = {
   onValueChange: (...event: any[]) => void;
-}
-function CustomSelect({ onValueChange }: CustomSelectProps) {
+  options: string[];
+  name?: string;
+};
+function CustomSelect({ onValueChange, options, name }: CustomSelectProps) {
+  let [make, setMake] = useState<string>(""); //state to kee track of the selected make, not used yet
   return (
     <Select onValueChange={onValueChange}>
       <FormControl>
         <SelectTrigger>
-          <SelectValue placeholder="Selecciona la marca" />
+          <SelectValue placeholder={`Seleccciona ${name}`} />
         </SelectTrigger>
       </FormControl>
       <SelectContent>
-        {popularMakes.map((value) => (
+        {options.map((value) => (
           <SelectItem value={value} key={value}>
             {value}
           </SelectItem>

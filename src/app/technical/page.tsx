@@ -37,6 +37,7 @@ function Technical() {
                 width={600}
                 height={400}
                 className="rounded"
+                priority
               ></Image>
               <Link
                 href={`./records/${id}`}

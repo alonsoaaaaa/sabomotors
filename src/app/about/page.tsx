@@ -23,8 +23,11 @@ function About() {
       >
         <div className="mt-10 md:mt-28">
           <p className="font-sans text-xl  text-center sm:text-2xl font-bold sm:text-gray-100 self-center shrink-0 sm:shrink sm:mb-12">
-            En Sabo Motors le brindamos crédito en seminuevos auditados,
-            seriedad y confianza a un precio competitivo. Comprometidos con la
+            En Sabo Motors le brindamos{" "}
+            <span className="font-extrabold text-black bg-blue-700">
+              Crédito en Seminuevos Auditados
+            </span>
+            , seriedad y confianza a un precio competitivo. Comprometidos con la
             mejora continua y la protección de tu patrimonio. En Sabo Motor
             ponemos los mejores autos de sus marcas confianza en su viaje
             automotriz, brindando asesoramiento experto. Nos esforzamos por
@@ -39,6 +42,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
           <Image
             src="/Mercedes-Benz_logo_2.svg"
@@ -46,6 +50,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
           <Image
             src="/Nissan_2020_logo.svg"
@@ -53,6 +58,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
           <Image
             src="/Peugeot_Logo.svg"
@@ -60,6 +66,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
           <Image
             src="/Renault_2021.svg"
@@ -67,6 +74,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
           <Image
             src="/Chevrolet.png"
@@ -74,6 +82,7 @@ function About() {
             className="pr-2"
             width={120}
             height={120}
+            priority
           />
         </div>
       </div>

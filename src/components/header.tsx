@@ -6,7 +6,7 @@ const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 
 function Header() {
   return (
-    <header className="flex flex-col px-5 pt-2 pb-2 w-full text-white bg-black shadow-sm">
+    <header className="flex flex-col px-5 pt-2 pb-2 w-full text-blue-200 bg-gray-800 shadow-sm">
       {/* <nav className="flex justify-center mt-2.5 w-full text-center max-md:flex-wrap max-md:max-w-full sm:justify-between"> */}
       <div className="flex flex-col sm:flex-row justify-start gap-1 sm:gap-5 text-sm font-bold leading-4 max-md:flex-wrap">
         <div className="self-center">
@@ -41,7 +41,12 @@ function Header() {
               VÉNDENOS TU COCHE
             </Button>
           </Link>
-
+          <Link className="text-center" href={"/contact"}>
+            {" "}
+            <Button variant="link" className="text-white text-large py-1">
+              CONTÁCTANOS
+            </Button>
+          </Link>
           <Link className="text-center" href={"/about"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
