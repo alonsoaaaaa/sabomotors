@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 
-function AddSucess() {
+function AddSucess({ email = "", contact_number = "" }) {
   const searchParams = useSearchParams();
-  const email = searchParams.get("email");
-  const contact_number = searchParams.get("contact_number");
+  // const email = searchParams.get("email");
+  // const contact_number = searchParams.get("contact_number");
   return (
     <div className="flex flex-col justify-center items-center content-center gap-3 pt-5 px-[10%]">
       <h1 className="text-green-500 text-4xl text-center">
