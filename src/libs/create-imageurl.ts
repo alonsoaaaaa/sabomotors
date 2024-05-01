@@ -6,10 +6,13 @@ export default async function createImageUrl(image: any) {
   console.log("Secret key: " + process.env.DO_ACCESS_KEY);
   console.log("Imagen recibida en el createImageUrl: ", image);
   formData.append("image", image);
-  const response = await fetch("http://localhost:3000/api/upload", {
-    method: "POST",
-    body: formData,
-  });
+  const response = await fetch(
+    "http://www.seminuevossabomotors.com/api/upload",
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
   const data = await response.json();
   const imgUrl = data.imageUrl;
 
