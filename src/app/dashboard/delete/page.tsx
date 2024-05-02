@@ -6,6 +6,7 @@ import VehicleDisplay from "@/components/vehicle-display";
 import VehicleSection from "@/components/vehicle-section";
 
 import { AvailableCars } from "@prisma/client";
+import { ArrowLeftIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -35,6 +36,10 @@ export default function DeleteAvailableCar() {
   console.log(carMake);
   return (
     <React.Fragment>
+      <Link href={"/dashboard"}>
+        <ArrowLeftIcon size={40} color="blue" />
+      </Link>
+
       <h1 className="text-2xl text-center py-2 text-red-400">
         Borrar carro en venta
       </h1>
