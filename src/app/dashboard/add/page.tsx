@@ -60,16 +60,13 @@ function AddPage() {
       }
       data.image = imageURLS; //Here we send them as an array of urls
       console.log("Datos mandados al BACK:", data);
-      const res = await fetch(
-        "http://www.seminuevossabomotors.com/api/availablecars",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ ...data }), //Stringify the data to send it to the backend
-        }
-      );
+      const res = await fetch(`${process.env.BASE_URL_DEV}/api/availablecars`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data }), //Stringify the data to send it to the backend
+      });
       const { email, contact_number } = await res.json(); //This is the response from the backend
       reset();
       router.push(`add/success`);

@@ -25,7 +25,7 @@ function VehicleCatalog() {
   }, []);
 
   let [carMake, setCarMake] = useState("Chevrolet");
-  console.log(carMake);
+  // console.log(carMake);
   return (
     <div className="flex flex-col self-stretch bg-white">
       <Header />

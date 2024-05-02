@@ -60,7 +60,7 @@ function AddPage() {
       }
       data.image = imageURLS; //Here we send them as an array of urls
       console.log("Datos mandados al BACK:", data);
-      const res = await fetch("http://www.seminuevossabomotors.com/api/cars", {
+      const res = await fetch(`${process.env.BASE_URL_DEV}/api/cars`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,9 @@ function AddPage() {
       const response = await res.json(); //This is the response from the backend
       console.log("RESPUESTAAAAA:", response);
       const { email, contact_number } = response;
-      router.push(`sell/success`);
+      router.push(
+        `sell/success/?email=${email}&contact_number=${contact_number}`
+      );
       reset();
     } catch (error) {
       console.error("Error al mandar los datos al BACK", error);

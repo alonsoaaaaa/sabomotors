@@ -28,7 +28,7 @@ function About() {
               Crédito en Seminuevos Auditados
             </span>
             , seriedad y confianza a un precio competitivo. Comprometidos con la
-            mejora continua y la protección de tu patrimonio. En Sabo Motor
+            mejora continua y la protección de tu patrimonio. En Sabo Motors
             ponemos los mejores autos de sus marcas confianza en su viaje
             automotriz, brindando asesoramiento experto. Nos esforzamos por
             construir relaciones a largo plazo con cada cliente, basadas en la

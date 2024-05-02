@@ -29,12 +29,6 @@ function Header() {
               INICIO
             </Button>
           </Link>
-          <Link className="text-center" href={"/technical"}>
-            {" "}
-            <Button variant="link" className="text-white text-large py-1">
-              FICHAS TÉCNICAS
-            </Button>
-          </Link>
           <Link className="text-center" href={"/sell"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">

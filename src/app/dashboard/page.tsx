@@ -1,5 +1,6 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
@@ -14,7 +15,12 @@ function Dashboard() {
         </Button>
       </Link>
       <Link href="/dashboard/delete">
-        <Button variant="destructive">Quitar coche</Button>
+        <Button
+          variant="destructive"
+          className="bg-orange-500 hover:bg-orange-400"
+        >
+          Quitar coche
+        </Button>
       </Link>
       <Link href="/dashboard/offers">
         <Button className="bg-yellow-500 hover:bg-yellow-400">
@@ -24,7 +30,10 @@ function Dashboard() {
       <Link href="/">
         <Button variant="ghost">Ver Catálogo Existente</Button>
       </Link>
-      {/* </div> */}
+      {/* logout */}
+      <Button variant="destructive" onClick={() => signOut()}>
+        Cerrar Sesión
+      </Button>
     </div>
   );
 }

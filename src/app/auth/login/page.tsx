@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { signIn } from "next-auth/react"; //This signIn function triggers the authorize function in the NextAuth configuration object
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowLeftIcon } from "lucide-react";
 
 function LoginPage() {
   const {
@@ -25,12 +28,13 @@ function LoginPage() {
       redirect: false,
     });
 
-    // console.log(res)
+    console.log("RESPUESTA SignIn", res);
     if (res?.error) {
       setError(res.error);
+      console.log("RES.ERROR: ", res.error);
     } else {
       router.push("/dashboard"); //router.push is used to redirect the user to another page by specifying the path
-      router.refresh();
+      // router.refresh();
     }
   });
 
@@ -93,6 +97,10 @@ function LoginPage() {
         <button className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2">
           Login
         </button>
+        <Link href={"/"} className="flex items-center">
+          <ArrowLeftIcon size={40} className="text-blue-500 cursor-pointer" />
+          <span className="font-semibold">Inicio</span>
+        </Link>
       </form>
     </div>
   );

@@ -22,7 +22,7 @@ function VehicleSection({
           priority
           src={imageSrc}
           alt="Vehicle"
-          className="self-center w-full aspect-[1.49] max-w-[300px]"
+          className="self-center w-full aspect-[1.49] max-w-[300px] rounded-md"
           width={300}
           height={200}
         />
