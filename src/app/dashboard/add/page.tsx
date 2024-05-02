@@ -60,7 +60,7 @@ function AddPage() {
       }
       data.image = imageURLS; //Here we send them as an array of urls
       console.log("Datos mandados al BACK:", data);
-      const res = await fetch(`${process.env.BASE_URL_DEV}/api/availablecars`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/availablecars`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
