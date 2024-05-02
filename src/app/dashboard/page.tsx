@@ -1,10 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
 
 function Dashboard() {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center gap-4 min-h-[90vh] justify-center text-center">
       <h1 className="font-extrabold text-xl">Dashboard</h1>
@@ -31,7 +33,13 @@ function Dashboard() {
         <Button variant="ghost">Ver Catálogo Existente</Button>
       </Link>
       {/* logout */}
-      <Button variant="destructive" onClick={() => signOut()}>
+      <Button
+        variant="destructive"
+        onClick={() => {
+          signOut();
+          router.push("/auth/login");
+        }}
+      >
         Cerrar Sesión
       </Button>
     </div>
