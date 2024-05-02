@@ -60,6 +60,7 @@ function Header() {
               priority
               alt="ubicacion"
               width={30}
+              height={30}
               className="self-center aspect-square"
             />
             <div className="mt-1.5">Ubicación</div>
@@ -73,6 +74,7 @@ function Header() {
               priority
               alt="lupa"
               width={30}
+              height={30}
               className="self-center aspect-square"
             />
             <div className="mt-1.5">Redes</div>
