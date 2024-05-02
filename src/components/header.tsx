@@ -55,11 +55,12 @@ function Header() {
             }
             className="flex flex-col px-2 self-center"
           >
-            <img
-              loading="lazy"
+            <Image
               src={navItems[1]}
-              alt=""
-              className="self-center aspect-square w-[30px]"
+              priority
+              alt="ubicacion"
+              width={30}
+              className="self-center aspect-square"
             />
             <div className="mt-1.5">Ubicación</div>
           </Link>
@@ -67,11 +68,12 @@ function Header() {
             href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
             className="flex flex-col px-2"
           >
-            <img
-              loading="lazy"
+            <Image
               src={navItems[2]}
-              alt=""
-              className="self-center aspect-square w-[30px]"
+              priority
+              alt="lupa"
+              width={30}
+              className="self-center aspect-square"
             />
             <div className="mt-1.5">Redes</div>
           </Link>
