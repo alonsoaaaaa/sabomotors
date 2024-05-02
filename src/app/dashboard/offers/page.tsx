@@ -33,9 +33,7 @@ function OffersPage() {
         <Link href={"/dashboard"}>
           <ArrowLeftIcon size={40} color="blue" />
         </Link>
-        <h1 className="font-bold self-center">
-          Autos que quieren ser vendidos
-        </h1>
+        <h1 className="font-bold self-center">Ofertas de coches</h1>
       </div>
 
       {cars.map((vehicle) => (
