@@ -33,13 +33,7 @@ function Dashboard() {
         <Button variant="ghost">Ver Catálogo Existente</Button>
       </Link>
       {/* logout */}
-      <Button
-        variant="destructive"
-        onClick={() => {
-          signOut();
-          router.push("/auth/login");
-        }}
-      >
+      <Button variant="destructive" onClick={() => signOut()}>
         Cerrar Sesión
       </Button>
     </div>
