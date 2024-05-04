@@ -6,6 +6,11 @@ function NavBar({ carMake, setCarMake }: { carMake: string; setCarMake: any }) {
     <nav className="flex flex-wrap justify-center items-center mt-8 text-xl font-bold text-black text-opacity-40">
       <SelectMake
         currentMake={carMake}
+        carMake={"Existentes"}
+        setCarMake={setCarMake}
+      />
+      <SelectMake
+        currentMake={carMake}
         carMake={"Chevrolet"}
         setCarMake={setCarMake}
       />

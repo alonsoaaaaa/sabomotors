@@ -24,7 +24,7 @@ function VehicleCatalog() {
     fetchAndSetCars();
   }, []);
 
-  let [carMake, setCarMake] = useState("Chevrolet");
+  let [carMake, setCarMake] = useState("Existentes");
   // console.log(carMake);
   return (
     <div className="flex flex-col self-stretch bg-white">
