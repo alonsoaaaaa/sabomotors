@@ -21,18 +21,30 @@ function About() {
         className={mainClasses + totalClasses}
         style={{ backgroundImage: `url(/localsabomotors.jpg)` }}
       >
-        <div className="mt-10 md:mt-28">
-          <p className="font-sans text-xl  text-center sm:text-2xl font-bold sm:text-gray-100 self-center shrink-0 sm:shrink sm:mb-12">
-            En Sabo Motors le brindamos{" "}
-            <span className="font-extrabold text-black bg-blue-700">
-              Crédito en Seminuevos Auditados
+        <div className="flex flex-col mt-8 gap-3">
+          <h1 className="font-sans text-3xl sm:text-5xl font-bold text-center text-blue-500">
+            MISIÓN
+          </h1>
+          <p className="font-sans text-xl  text-center sm:text-2xl font-bold text-gray-600 sm:text-gray-300 self-center shrink-0 sm:shrink sm:mb-12">
+            Nuestra misión es estar comprometidos con el patrimonio del cliente,
+            ya que cada vehículo representa los sueños y esfuerzos de una
+            familia.{" "}
+            <span className="underline text-blue-500">
+              Nuestro enfoque es tu familia.
+            </span>{" "}
+            Por ello en en Sabo Motors le brindamos{" "}
+            <span className="font-extrabold text-black">
+              crédito en seminuevos auditados
             </span>
-            , seriedad y confianza a un precio competitivo. Comprometidos con la
-            mejora continua y la protección de tu patrimonio. En Sabo Motors
-            ponemos los mejores autos de sus marcas confianza en su viaje
-            automotriz, brindando asesoramiento experto. Nos esforzamos por
-            construir relaciones a largo plazo con cada cliente, basadas en la
-            honestidad, la integridad y el respeto mutuo.
+            , seriedad y confianza a un precio competitivo.
+            <br />
+            Nuestros valores son{" "}
+            <span className="font-bold font-serif text-yellow-400 mb-10">
+              la honestidad, la lealtad, confianza y principalmente el enfoque
+              al cliente.
+            </span>
+            <br />
+            Por eso ofrecemos las mejores marcas:
           </p>
         </div>
         <div className="flex flex-wrap self-center justify-center sm:mb-28">

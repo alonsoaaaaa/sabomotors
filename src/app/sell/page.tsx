@@ -401,7 +401,15 @@ function AddPage() {
                 </span>
               )}
             </div>
-
+            <Card>
+              <Link href="/privacy">
+                <CardHeader>Aviso de privacidad</CardHeader>
+                <CardDescription className="px-3">
+                  Revisa qué hacemos con tus datos personales y cómo los
+                  manejamos
+                </CardDescription>
+              </Link>
+            </Card>
             <Button
               type="submit"
               className="w-full disabled:bg-gray-500"
