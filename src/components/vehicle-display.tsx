@@ -5,7 +5,7 @@ function VehicleDisplay({ vehicles, currentCarMake }: any) {
   // console.log("currentCarMake desde VehicleDisplay", currentCarMake);
   return vehicles.map(
     (vehicle: AvailableCars) =>
-      (currentCarMake === "Existentes" || vehicle.make === currentCarMake) && (
+      (currentCarMake === "Disponibles" || vehicle.make === currentCarMake) && (
         <VehicleSection
           key={vehicle.id}
           imageSrc={vehicle.image[0]}
