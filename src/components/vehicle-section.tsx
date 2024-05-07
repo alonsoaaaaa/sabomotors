@@ -30,15 +30,17 @@ function VehicleSection({
         />
 
         <div className="flex flex-col grow justify-evenly">
-          <p className="self-center font-semibold">{model}</p>
-          <p className="self-center">Precio ${price}</p>
+          <p className="self-center font-semibold text-gray-950">{model}</p>
+          <p className="self-center font-medium">Precio ${price}</p>
           {credit && credit === "si" && (
             <p className="self-center text-blue-500">Crédito disponible</p>
           )}
           {features && features.length > 0 && (
-            <div className="self-center">
+            <div className="items-center">
               {features.map((feature) => (
-                <p key={feature}>{feature}</p>
+                <p key={feature} className="text-center">
+                  {feature}
+                </p>
               ))}
             </div>
           )}
