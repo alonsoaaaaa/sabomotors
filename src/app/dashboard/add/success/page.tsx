@@ -14,8 +14,11 @@ function AddSucess() {
         registrado.
       </p>
       <CheckCheckIcon size={100} color="green" />
+      <Button className="bg-blue-500 hover:bg-blue-400">
+        <Link href={"/dashboard"}>Dashboard</Link>
+      </Button>
       <Button>
-        <Link href={"/"}>Regresar</Link>
+        <Link href={"/"}>Ver Catálogo</Link>
       </Button>
     </div>
   );

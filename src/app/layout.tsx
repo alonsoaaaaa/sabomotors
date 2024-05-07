@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,6 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+     window.dataLayer = window.dataLayer || [];
+     function gtag() { dataLayer.push(arguments); }
+     gtag('js', new Date());
+     gtag('config', 'G-N25S5DTVYN');
+   `,
+          }}
+        ></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

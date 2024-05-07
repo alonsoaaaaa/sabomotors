@@ -38,11 +38,7 @@ function AddPage() {
   const handleImageSubmit = async (image: any) => {
     try {
       console.log("Imagen recibida en el handleImageSubmit: ", image);
-      // let imageArray = [];
       let url = await createImageUrl(image);
-      // imageArray.push(url);
-      console.log("URLS XXX: ", imageURLS); //mockear diferentes urls: url1, url2, url3
-      // setImageUrl(url);
       setImagesNames([...imagesNames, { name: image.name }]); //if its in this array, doesn't need to be uploaded again, so I will hide the upload button. This is for client side only
       setSubmittingImg(false);
       console.log("imagesNames: ", imagesNames);
@@ -59,8 +55,7 @@ function AddPage() {
         return;
       }
       data.image = imageURLS; //Here we send them as an array of urls
-      console.log("Datos mandados al BACK:", data);
-      // const res = await fetch(`${process.env.BASE_URL}/api/availablecars`, { NOTA: Only in development
+      data.features = data.features.split(","); //We split the features into an array
       const res = await fetch(`/api/availablecars`, {
         method: "POST",
         headers: {
@@ -69,7 +64,7 @@ function AddPage() {
         body: JSON.stringify({ ...data }), //Stringify the data to send it to the backend
       });
       const { email, contact_number } = await res.json(); //This is the response from the backend
-      reset();
+      reset(); //Reset the form after sending the data
       router.push(`add/success`);
     } catch (error) {
       console.error("Error al mandar los datos al BACK", error);
@@ -338,10 +333,10 @@ function AddPage() {
             <div className="grid gap-2">
               <Label>
                 Características adicionales{" "}
-                <span className="font-light">(opcional)</span>
+                <span className="font-light">(separadas por coma)</span>
               </Label>
               <Input
-                placeholder="Descripción de las características adicionales"
+                placeholder="ej: Aire acondicionado, Vidrios eléctricos, etc."
                 {...register("features")}
               />
             </div>

@@ -2,7 +2,6 @@ import { AvailableCars } from "@prisma/client";
 import VehicleSection from "./vehicle-section";
 
 function VehicleDisplay({ vehicles, currentCarMake }: any) {
-  // console.log("currentCarMake desde VehicleDisplay", currentCarMake);
   return vehicles.map(
     (vehicle: AvailableCars) =>
       (currentCarMake === "Disponibles" || vehicle.make === currentCarMake) && (

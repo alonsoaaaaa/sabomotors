@@ -36,24 +36,21 @@ function OffersPage() {
         <h1 className="font-bold self-center">Ofertas de coches</h1>
       </div>
 
-      {cars.map((vehicle) => (
+      {cars.map((car) => (
         <>
           <VehicleOfferSection
-            key={vehicle.id}
-            image={vehicle.image}
-            model={vehicle.model}
-            facture={vehicle.FactureType}
-            year={vehicle.year}
-            email={vehicle.email}
-            mileage={vehicle.mileage}
-            contact_number={vehicle.contact_number}
-            vin={vehicle.vin}
+            key={car.id}
+            image={car.image}
+            model={car.model}
+            facture={car.FactureType}
+            year={car.year}
+            email={car.email}
+            mileage={car.mileage}
+            contact_number={car.contact_number}
+            vin={car.vin}
           />
 
-          <Button
-            onClick={() => handleDelete(vehicle.id)}
-            variant="destructive"
-          >
+          <Button onClick={() => handleDelete(car.id)} variant="destructive">
             Borrar
           </Button>
         </>

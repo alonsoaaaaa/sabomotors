@@ -4,9 +4,9 @@ import { AvailableCars } from "@prisma/client";
 export async function POST(req: Request) {
   try {
     const data: AvailableCars = await req.json();
-    console.log("Data recibida en el BACK", data);
+    // console.log("Data recibida en el BACK", data);
 
-    console.log("Image URLS:", data.image);
+    // console.log("Image URLS:", data.image);
     await createDisplayCar(data);
     return Response.json({
       message: `Car created successfully`,

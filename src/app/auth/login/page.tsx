@@ -18,7 +18,7 @@ function LoginPage() {
 
   const onSubmit = handleSubmit(async (data) => {
     //This onSubmit variable stores a useForm function from react-hook-form and used in the form onSubmit event
-    console.log(data);
+    console.log("Datos: ", data);
 
     const res = await signIn("credentials", {
       //This replaces the fetch call, sending the data to the API route in /api/auth/[...nextauth]/route.js

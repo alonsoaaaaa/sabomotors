@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useRef, useState } from "react";
+import { use, useRef, useState } from "react";
 import React from "react";
 import { useRouter } from "next/navigation";
 import createImageUrl from "@/libs/create-imageurl";
@@ -34,6 +34,13 @@ function AddPage() {
   const [imageError, setImageError] = useState(null as string | null);
   const insuranceRef = useRef(null);
   insuranceRef.current = watch("insurance");
+  // const positionsRef = useRef<string[]>([
+  //   "frente",
+  //   "atrás",
+  //   "perfil izquierdo",
+  //   "perfil derecho",
+  // ]);
+  // let posIndex = 0;
 
   const handleImageSubmit = async (image: any) => {
     try {
@@ -70,7 +77,7 @@ function AddPage() {
       });
 
       const response = await res.json(); //This is the response from the backend
-      console.log("RESPUESTAAAAA:", response);
+      // console.log("RESPUESTAAAAA:", response);
       const { email, contact_number } = response;
       router.push(
         `sell/success/?email=${email}&contact_number=${contact_number}`
@@ -285,8 +292,9 @@ function AddPage() {
 
             <div className="grid gap-2">
               <Label htmlFor="first-name">
-                Fotos <span className="font-light">(al menos una)</span>
+                Fotos <span className="font-light">(5 fotos)</span>
               </Label>
+
               <Input
                 type="file"
                 placeholder="Imágenes"
@@ -296,11 +304,17 @@ function AddPage() {
                   setDisplayImages([...displayImages, e.target.files[0]]);
                 }}
               />
+              <p className="">
+                Posición frente:{" "}
+                <span className="text-blue-500">{displayImages[0]?.name} </span>
+              </p>
+              <p className="">Posición atrás:</p>
+              <p className="">Posición perfil izquierdo:</p>
+              <p className="">Posición perfil derecho:</p>
+              <p className="">Interior:</p>
+
               <ul className="flex flex-col">
                 {displayImages.map((image) => {
-                  console.log("Imagenes displayImages: ", displayImages);
-                  console.log("Imagen en el displayImages.map: ", image);
-
                   return (
                     <div
                       key={image.name}
@@ -381,13 +395,10 @@ function AddPage() {
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="contacto">
-                Número de contacto{" "}
-                <span className="font-light">(opcional)</span>
-              </Label>
+              <Label htmlFor="contacto">Número de contacto </Label>
               <Input
                 type="text"
-                placeholder="55 1234 5678"
+                // placeholder="55 1234 5678"
                 {...register("contact_number", {
                   pattern: {
                     value: /^[0-9]{10}$/i,

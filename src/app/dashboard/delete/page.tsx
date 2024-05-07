@@ -2,8 +2,6 @@
 import { FetchAvailableCars } from "@/app/actions/actions";
 import NavBar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
-import VehicleDisplay from "@/components/vehicle-display";
-import VehicleSection from "@/components/vehicle-section";
 
 import { AvailableCars } from "@prisma/client";
 import { ArrowLeftIcon } from "lucide-react";
@@ -32,7 +30,7 @@ export default function DeleteAvailableCar() {
     setCars(cars.filter((car) => car.id !== id));
   };
 
-  let [carMake, setCarMake] = useState("Chevrolet");
+  let [carMake, setCarMake] = useState("Disponibles");
   console.log(carMake);
   return (
     <React.Fragment>
@@ -47,7 +45,7 @@ export default function DeleteAvailableCar() {
       <div className="flex flex-row flex-wrap justify-center md:justify-start mx-[3%]">
         {cars.map(
           (car) =>
-            car.make === carMake && (
+            (carMake === "Disponibles" || car.make === carMake) && (
               <div className="flex flex-col w-[60%] md:w-[30%]" key={car.id}>
                 <div className="flex flex-col grow text-sm leading-5 text-black max-md:mt-10">
                   <Image

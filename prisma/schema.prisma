@@ -26,10 +26,10 @@ model CarOffers {
   FactureType    String
   insurance      String?
   platenum       String?
-  contact_number String?
+  contact_number String
   email          String
 
-  createdAt DateTime  @default(now())
+  createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
 }
 
@@ -42,8 +42,8 @@ model AvailableCars {
   image       String[]
   FactureType String?
   credit      String?
-  features    String?
+  features    String[]
 
-  createdAt DateTime  @default(now())
+  createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
 }
