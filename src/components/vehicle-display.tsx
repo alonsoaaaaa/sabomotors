@@ -12,6 +12,7 @@ function VehicleDisplay({ vehicles, currentCarMake }: any) {
           model={vehicle.model}
           credit={vehicle.credit}
           features={vehicle.features}
+          price={vehicle.price}
         />
       )
   );

@@ -8,12 +8,14 @@ function VehicleSection({
   model,
   credit,
   features,
+  price,
 }: {
   imageSrc: string;
   downpayment: string;
   model: string;
   credit: string | null;
   features: string[] | null;
+  price: string;
 }) {
   return (
     <div className="flex flex-col w-[60%] md:w-[30%]">
@@ -29,9 +31,9 @@ function VehicleSection({
 
         <div className="flex flex-col grow justify-evenly">
           <p className="self-center font-semibold">{model}</p>
-          <p className="self-center">Enganche desde ${downpayment}</p>
+          <p className="self-center">Precio ${price}</p>
           {credit && credit === "si" && (
-            <p className="self-center">Crédito disponible</p>
+            <p className="self-center text-blue-500">Crédito disponible</p>
           )}
           {features && features.length > 0 && (
             <div className="self-center">
