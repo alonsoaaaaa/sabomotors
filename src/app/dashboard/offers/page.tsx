@@ -28,13 +28,15 @@ function OffersPage() {
     fetchAndSetCars();
   }, []);
   return (
-    <div className="flex flex-col gap-3 min-h-[90vh] mt-10 items-center">
-      <div className="flex">
+    <div className="flex flex-col gap-3 min-h-[90vh] items-center">
+      <div className="pr-[65%] sm:pr-[35%]">
         <Link href={"/dashboard"}>
           <ArrowLeftIcon size={40} color="blue" />
         </Link>
-        <h1 className="font-bold self-center">Ofertas de coches</h1>
       </div>
+      <h1 className="font-bold self-center text-yellow-400">
+        Ofertas de Vehículos
+      </h1>
 
       {cars.map((car) => (
         <>

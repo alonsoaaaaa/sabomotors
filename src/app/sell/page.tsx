@@ -15,7 +15,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import createImageUrl from "@/libs/create-imageurl";
 import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, Upload } from "lucide-react";
+import SubmitImageSection from "@/components/submit-image-section";
 
 function AddPage() {
   const {
@@ -25,22 +26,24 @@ function AddPage() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm();
+  debugger;
   const router = useRouter();
-
-  const [displayImages, setDisplayImages] = useState<File[]>([]);
+  const position = [
+    "frente",
+    "atrás",
+    "perfil izquierdo",
+    "perfil derecho",
+    "interior",
+  ];
+  const [savedImages, setSavedImages] = useState<File[]>([]); //This is the array of images that are being displayed in the form ready to be uploaded with the "Subir" button or deleted with the "Eliminar" button
   const [imagesNames, setImagesNames] = useState([] as any[]);
+  const [selectedImages, setSelectedImages] = useState([] as any[]); //This is the array of all the position that have been uploaded with the legend "Imagen subida" at the right of the image name
+  // const [currentImage, setCurrentImage] = useState<File>(); //This is the image that is being uploaded at the moment
   const [imageURLS, setImageURLS] = useState([] as string[]);
   const [submittingImg, setSubmittingImg] = useState(false);
   const [imageError, setImageError] = useState(null as string | null);
   const insuranceRef = useRef(null);
   insuranceRef.current = watch("insurance");
-  // const positionsRef = useRef<string[]>([
-  //   "frente",
-  //   "atrás",
-  //   "perfil izquierdo",
-  //   "perfil derecho",
-  // ]);
-  // let posIndex = 0;
 
   const handleImageSubmit = async (image: any) => {
     try {
@@ -48,7 +51,7 @@ function AddPage() {
       // let imageArray = [];
       let url = await createImageUrl(image);
       // imageArray.push(url);
-      console.log("URLS XXX: ", imageURLS); //mockear diferentes urls: url1, url2, url3
+      // console.log("URLS XXX: ", imageURLS); //mockear diferentes urls: url1, url2, url3
       // setImageUrl(url);
       setImagesNames([...imagesNames, { name: image.name }]); //if its in this array, doesn't need to be uploaded again, so I will hide the upload button. This is for client side only
       setSubmittingImg(false);
@@ -61,7 +64,7 @@ function AddPage() {
   };
   const onSubmit = async (data: any) => {
     try {
-      if (imagesNames.length === 0) {
+      if (imagesNames.length !== 5) {
         setImageError("Necesitas subir al menos una imágen");
         return;
       }
@@ -291,30 +294,115 @@ function AddPage() {
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="first-name">
+              <Label htmlFor="fotos">
                 Fotos <span className="font-light">(5 fotos)</span>
               </Label>
-
-              <Input
-                type="file"
-                placeholder="Imágenes"
-                accept="image/png, image/jpeg, image/jpg"
-                onChange={(e) => {
-                  if (!e.target.files || !e.target.files[0]) return;
-                  setDisplayImages([...displayImages, e.target.files[0]]);
-                }}
+              {position.map((pos, index) => (
+                <SubmitImageSection
+                  selectedImages={selectedImages}
+                  setSelectedImages={setSelectedImages}
+                  savedImages={savedImages}
+                  setSavedImages={setSavedImages}
+                  handleImageSubmit={handleImageSubmit}
+                  position={pos}
+                  index={index}
+                  key={index}
+                />
+              ))}
+              {/* <SubmitImageSection
+                selectedImages={selectedImages}
+                setSelectedImages={setSelectedImages}
+                savedImages={savedImages}
+                setSavedImages={setSavedImages}
+                handleImageSubmit={handleImageSubmit}
+                position="frente"
+                index={0}
               />
-              <p className="">
-                Posición frente:{" "}
-                <span className="text-blue-500">{displayImages[0]?.name} </span>
-              </p>
-              <p className="">Posición atrás:</p>
-              <p className="">Posición perfil izquierdo:</p>
-              <p className="">Posición perfil derecho:</p>
-              <p className="">Interior:</p>
+              <SubmitImageSection
+                selectedImages={selectedImages}
+                setSelectedImages={setSelectedImages}
+                savedImages={savedImages}
+                setSavedImages={setSavedImages}
+                handleImageSubmit={handleImageSubmit}
+                position="atrás"
+                index={1}
+              />
+              <SubmitImageSection
+                selectedImages={selectedImages}
+                setSelectedImages={setSelectedImages}
+                savedImages={savedImages}
+                setSavedImages={setSavedImages}
+                handleImageSubmit={handleImageSubmit}
+                position="perfil izquierdo"
+                index={2}
+              />
+              <SubmitImageSection
+                selectedImages={selectedImages}
+                setSelectedImages={setSelectedImages}
+                savedImages={savedImages}
+                setSavedImages={setSavedImages}
+                handleImageSubmit={handleImageSubmit}
+                position="perfil derecho"
+                index={3}
+              />
+              <SubmitImageSection
+                selectedImages={selectedImages}
+                setSelectedImages={setSelectedImages}
+                savedImages={savedImages}
+                setSavedImages={setSavedImages}
+                handleImageSubmit={handleImageSubmit}
+                position="interior"
+                index={4}
+              /> */}
 
-              <ul className="flex flex-col">
-                {displayImages.map((image) => {
+              {/* {displayImages[displayImages.length - 1]?.name}{" "}
+               */}
+              {/* imagesNames.find(
+                    (img) => img.name === currentImages?.name */}
+              {/* <p className="">Posición frente: </p>
+              <div className="flex gap-1">
+                <span className="text-blue-500">{currentImages?.name}</span>
+
+                {currentImage !== displayImages[0] ? (
+                  <>
+                    <Button
+                      variant={"ghost"}
+                      className="bg-green-400 hover:bg-green-500"
+                      onClick={async () => {
+                        if (!currentImage) return;
+                        setSubmittingImg(true);
+                        setDisplayImages([...displayImages, currentImage]);
+                        try {
+                          await handleImageSubmit(currentImage);
+                        } catch (error) {
+                          console.error("Error al subir la imagen", error);
+                        }
+                      }}
+                      disabled={submittingImg}
+                    >
+                      Subir
+                    </Button>
+                    <Button
+                      variant={"destructive"}
+                      className="bg-red-400 hover:bg-red-500"
+                      onClick={() => {
+                        setDisplayImages(
+                          displayImages.filter(
+                            (img) => img !== displayImages[0]
+                          )
+                        );
+                      }}
+                      disabled={submittingImg}
+                    >
+                      Eliminar
+                    </Button>
+                  </>
+                ) : (
+                  "Imagen subida"
+                )}
+              </div> */}
+              {/* <ul className="flex flex-col">
+                {savedImages.map((image) => {
                   return (
                     <div
                       key={image.name}
@@ -352,8 +440,8 @@ function AddPage() {
                             variant={"destructive"}
                             className="bg-red-400 hover:bg-red-500"
                             onClick={() => {
-                              setDisplayImages(
-                                displayImages.filter((img) => img !== image)
+                              setSavedImages(
+                                savedImages.filter((img) => img !== image)
                               );
                             }}
                             disabled={submittingImg}
@@ -368,7 +456,7 @@ function AddPage() {
               </ul>
               {imageError ? (
                 <div className="flex text-red-500">{imageError as string}</div>
-              ) : null}
+              ) : null} */}
             </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Correo Electrónico</Label>
@@ -414,7 +502,11 @@ function AddPage() {
             </div>
             <Card>
               <Link href="/privacy">
-                <CardHeader>Aviso de privacidad</CardHeader>
+                <CardHeader>
+                  <span className="underline underline-offset-1">
+                    Aviso de privacidad
+                  </span>
+                </CardHeader>
                 <CardDescription className="px-3">
                   Revisa qué hacemos con tus datos personales y cómo los
                   manejamos

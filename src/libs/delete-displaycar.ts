@@ -1,6 +1,5 @@
-import { PrismaClient, CarOffers } from "@prisma/client";
-
-const db = new PrismaClient();
+import prisma from "@/libs/db";
+const db = prisma;
 // delete car
 async function deleteDisplayCar(id: number) {
   const car = await db.availableCars.delete({

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-//TODO: Do the npx prisma migrate deploy to update the database
+//TODO: Setup google analytics correctly
 function VehicleSection({
   imageSrc,
   downpayment,
@@ -31,7 +31,9 @@ function VehicleSection({
 
         <div className="flex flex-col grow justify-evenly">
           <p className="self-center font-semibold text-gray-950">{model}</p>
-          <p className="self-center font-medium">Precio ${price}</p>
+          <p className="self-center font-medium">
+            Precio ${price.slice(0, 3) + "," + price.slice(3)}
+          </p>
           {credit && credit === "si" && (
             <p className="self-center text-blue-500">Crédito disponible</p>
           )}

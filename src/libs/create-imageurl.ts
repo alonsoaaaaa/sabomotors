@@ -2,9 +2,9 @@ export default async function createImageUrl(image: any) {
   debugger;
   // const urlArray = [];
   const formData = new FormData();
-  console.log("Access key: " + process.env.DO_SECRET_KEY);
-  console.log("Secret key: " + process.env.DO_ACCESS_KEY);
-  console.log("Imagen recibida en el createImageUrl: ", image);
+  // console.log("Access key: " + process.env.DO_SECRET_KEY);
+  // console.log("Secret key: " + process.env.DO_ACCESS_KEY);
+  // console.log("Imagen recibida en el createImageUrl: ", image);
   formData.append("image", image);
   // const response = await fetch(`${process.env.BASE_URL}/api/upload`, { NOTA: Only in development
   const response = await fetch(`/api/upload`, {

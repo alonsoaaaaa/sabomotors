@@ -3,7 +3,7 @@ import Banner from "@/components/banner";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import NavBar from "@/components/navbar";
-import { AvailableCars, CarOffers, PrismaClient } from "@prisma/client";
+import { AvailableCars, CarOffers } from "@prisma/client";
 import SelectMake from "@/components/select-make";
 import { Button } from "@/components/ui/button";
 import VehicleDisplay from "@/components/vehicle-display";

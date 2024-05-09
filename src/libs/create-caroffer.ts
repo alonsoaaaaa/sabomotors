@@ -1,5 +1,6 @@
-import { CarOffers, PrismaClient } from "@prisma/client";
-const db = new PrismaClient();
+import { CarOffers } from "@prisma/client";
+import prisma from "@/libs/db";
+const db = prisma;
 
 async function createCar(data: CarOffers) {
   const {

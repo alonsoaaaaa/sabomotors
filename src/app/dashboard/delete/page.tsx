@@ -34,9 +34,11 @@ export default function DeleteAvailableCar() {
   console.log(carMake);
   return (
     <React.Fragment>
-      <Link href={"/dashboard"}>
-        <ArrowLeftIcon size={40} color="blue" />
-      </Link>
+      <div className="flex items-center justify-center pr-[65%] sm:pr-[35%]">
+        <Link href={"/dashboard"} className="self-center  ">
+          <ArrowLeftIcon size={40} color="blue" />
+        </Link>
+      </div>
 
       <h1 className="text-2xl text-center py-2 text-red-400">
         Borrar carro en venta

@@ -14,6 +14,9 @@ function AddSucess() {
         registrado.
       </p>
       <CheckCheckIcon size={100} color="green" />
+      <Button className="bg-green-500 hover:bg-green-600">
+        <Link href={"/dashboard/add"}>Añadir otro coche</Link>
+      </Button>
       <Button className="bg-blue-500 hover:bg-blue-400">
         <Link href={"/dashboard"}>Dashboard</Link>
       </Button>

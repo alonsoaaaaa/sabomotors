@@ -1,11 +1,15 @@
-import { CarOffers } from "@prisma/client";
 import Image from "next/image";
-import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import React from "react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -34,15 +38,27 @@ function VehicleOfferSection({
   return (
     <div className="flex flex-col w-[60%] md:w-[34%] justify-center">
       <div className="flex flex-col grow text-sm leading-5 text-black max-md:mt-10">
-        <Image
-          priority
-          src={image[0]}
-          alt="Vehicle"
-          className="self-center w-full aspect-[1.49] max-w-[300px] rounded"
-          width={600}
-          height={300}
-        />
-
+        <h1 className="font-bold text-red-500"></h1>
+        <Carousel>
+          <CarouselContent className="flex justify-between">
+            {image.map((image) => (
+              <CarouselItem key={image}>
+                <div className="flex justify-center items-center">
+                  <Image
+                    priority
+                    src={image}
+                    alt="Vehicle"
+                    className="self-center w-full aspect-[1.49] max-w-[300px] rounded"
+                    width={600}
+                    height={300}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
         <Table>
           <TableHeader>
             <TableRow>

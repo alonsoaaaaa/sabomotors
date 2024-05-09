@@ -18,7 +18,7 @@ function AddSucess({ searchParams }: { searchParams: any }) {
         <span className="font-bold">{email}</span> con el número de uno de
         nuestros agentes para que puedas contactarlo, o nos comunicaremos al
         número telefónico {<span className="font-bold">{contact_number}</span>}{" "}
-        que proporcionaste.
+        que nos proporcionaste.
       </p>
       <CheckCheckIcon size={100} color="green" />
       <Button>
