@@ -7,7 +7,8 @@ function VehicleDisplay({ vehicles, currentCarMake }: any) {
       (currentCarMake === "Disponibles" || vehicle.make === currentCarMake) && (
         <VehicleSection
           key={vehicle.id}
-          imageSrc={vehicle.image[0]}
+          id={vehicle.id}
+          imageSrc={vehicle.image}
           downpayment={vehicle.downpayment}
           model={vehicle.model}
           credit={vehicle.credit}

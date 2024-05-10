@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 //TODO: Setup google analytics correctly
 function VehicleSection({
+  id,
   imageSrc,
   downpayment,
   model,
@@ -10,7 +12,8 @@ function VehicleSection({
   features,
   price,
 }: {
-  imageSrc: string;
+  id: number;
+  imageSrc: string[];
   downpayment: string;
   model: string;
   credit: string | null;
@@ -22,7 +25,7 @@ function VehicleSection({
       <div className="flex flex-col grow text-sm leading-5 text-black max-md:mt-10">
         <Image
           priority
-          src={imageSrc}
+          src={imageSrc[0]}
           alt="Vehicle"
           className="self-center w-full aspect-[1.49] max-w-[300px] rounded-md"
           width={300}
@@ -47,12 +50,15 @@ function VehicleSection({
             </div>
           )}
           <Link
-            href={
-              "https://www.facebook.com/seminuevossabomotors/photos?locale=es_LA"
-            }
-            className="self-center text-sm text-center text-black border-b-2 border-yellow-400 border-solid"
+            href={"/vehicles/" + id}
+            className="self-center text-sm text-center text-black"
           >
-            Ver detalles
+            <Button
+              variant="ghost"
+              className="text-blue-400 underline underline-thickness-2 underline-offset-4 underline-transparent hover:text-blue-600 pt-0"
+            >
+              Ver detalles
+            </Button>
           </Link>
         </div>
       </div>

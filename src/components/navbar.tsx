@@ -16,7 +16,7 @@ function NavBar({ carMake, setCarMake }: { carMake: string; setCarMake: any }) {
       />
       <SelectMake
         currentMake={carMake}
-        carMake={"Nissan"}
+        carMake={"Jeep"}
         setCarMake={setCarMake}
       />
       <SelectMake

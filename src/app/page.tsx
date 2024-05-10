@@ -3,15 +3,9 @@ import Banner from "@/components/banner";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import NavBar from "@/components/navbar";
-import { AvailableCars, CarOffers } from "@prisma/client";
-import SelectMake from "@/components/select-make";
-import { Button } from "@/components/ui/button";
+import { AvailableCars } from "@prisma/client";
 import VehicleDisplay from "@/components/vehicle-display";
-import VehicleSection from "@/components/vehicle-section";
-import Image from "next/image";
-import Link from "next/link";
-import { use, useEffect, useState } from "react";
-import { vehicles } from "@/utils/data";
+import { useEffect, useState } from "react";
 import { FetchAvailableCars } from "./actions/actions";
 
 function VehicleCatalog() {
