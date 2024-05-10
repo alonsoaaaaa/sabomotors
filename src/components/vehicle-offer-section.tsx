@@ -87,7 +87,14 @@ function VehicleOfferSection({
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>{email}</TableCell>
+              <TableCell>
+                <a
+                  href={`mailto:${email}`}
+                  className="text-blue-400 underline underline-offset-4"
+                >
+                  {email}
+                </a>
+              </TableCell>
             </TableRow>
           </TableBody>
           <TableHeader>
@@ -97,7 +104,15 @@ function VehicleOfferSection({
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>{contact_number}</TableCell>
+              <TableCell>
+                {" "}
+                <a
+                  href={`mailto:${contact_number}`}
+                  className="text-blue-400 underline underline-offset-4"
+                >
+                  {contact_number}
+                </a>
+              </TableCell>
             </TableRow>
           </TableBody>
           <TableHeader>

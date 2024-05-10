@@ -95,7 +95,14 @@ function VehicleDetailsSection({
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>servicio@seminuevossabomotors.com</TableCell>
+            <TableCell>
+              <a
+                href="mailto:servicio@seminuevossabomotors.com"
+                className="text-blue-400 underline underline-offset-4"
+              >
+                servicio@seminuevossabomotors.com
+              </a>
+            </TableCell>
           </TableRow>
         </TableBody>
         <TableHeader>
@@ -105,7 +112,14 @@ function VehicleDetailsSection({
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>55 1641 6497</TableCell>
+            <TableCell>
+              <a
+                href="tel:+525516416497"
+                className="text-blue-400 underline underline-offset-4"
+              >
+                55 1641 6497
+              </a>
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>
