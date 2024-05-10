@@ -107,7 +107,7 @@ function VehicleOfferSection({
               <TableCell>
                 {" "}
                 <a
-                  href={`mailto:${contact_number}`}
+                  href={`tel:${contact_number}`}
                   className="text-blue-400 underline underline-offset-4"
                 >
                   {contact_number}
