@@ -100,7 +100,7 @@ function VehicleDetailsSection({
                 href="mailto:servicio@seminuevossabomotors.com"
                 className="text-blue-400 underline underline-offset-4"
               >
-                servicio@seminuevossabomotors.com
+                ventas@seminuevossabomotors.com
               </a>
             </TableCell>
           </TableRow>

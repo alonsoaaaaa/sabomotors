@@ -85,7 +85,7 @@ function NoticeOfPrivacy() {
         prácticas de privacidad, por favor contáctenos en: Seminuevos Sabo
         Motors, Avenida del ferrocarril, Manzana 23 Lote 30, Santa Cruz
         Tlapacoya, 56577 Ixtapaluca, Méx o al correo electrónico
-        ventas@seminuevossabomotors.com
+        servicio@seminuevossabomotors.com
       </p>
     </div>
   );
