@@ -97,7 +97,7 @@ function VehicleDetailsSection({
           <TableRow>
             <TableCell>
               <a
-                href="mailto:servicio@seminuevossabomotors.com"
+                href="mailto:ventas@seminuevossabomotors.com"
                 className="text-blue-400 underline underline-offset-4"
               >
                 ventas@seminuevossabomotors.com

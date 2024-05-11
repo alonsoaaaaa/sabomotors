@@ -7,6 +7,7 @@ import { AvailableCars } from "@prisma/client";
 import VehicleDisplay from "@/components/vehicle-display";
 import { useEffect, useState } from "react";
 import { FetchAvailableCars } from "./actions/actions";
+import FilterNavbar from "@/components/filtering-navbar";
 
 function VehicleCatalog() {
   let [cars, setCars] = useState<AvailableCars[]>([]);
@@ -19,6 +20,12 @@ function VehicleCatalog() {
   }, []);
 
   let [carMake, setCarMake] = useState("Disponibles");
+  const filters = ["Cars", "Views", "Food"];
+  const handleFilterChange = (selectedFilter: string) => {
+    // Handle the selected filter
+    console.log("Selected filter:", selectedFilter);
+  };
+
   return (
     <div className="flex flex-col self-stretch bg-white">
       <Header />
