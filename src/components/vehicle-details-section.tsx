@@ -58,10 +58,10 @@ function VehicleDetailsSection({
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Modelo</TableHead>
-            <TableHead>Crédito</TableHead>
-            <TableHead>Factura</TableHead>
-            <TableHead>Detalles</TableHead>
+            <TableHead className="text-blue-800">Modelo</TableHead>
+            <TableHead className="text-blue-800">Crédito</TableHead>
+            <TableHead className="text-blue-800">Factura</TableHead>
+            <TableHead className="text-blue-800">Detalles</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -78,8 +78,8 @@ function VehicleDetailsSection({
         </TableBody>
         <TableHeader>
           <TableRow>
-            <TableHead>Precio</TableHead>
-            <TableHead>Enganche</TableHead>
+            <TableHead className="text-blue-800">Precio</TableHead>
+            <TableHead className="text-blue-800">Enganche</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -90,7 +90,9 @@ function VehicleDetailsSection({
         </TableBody>
         <TableHeader>
           <TableRow>
-            <TableHead>Correo de Sabo Motors</TableHead>
+            <TableHead className="text-gray-800">
+              Correo de Sabo Motors
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -107,7 +109,9 @@ function VehicleDetailsSection({
         </TableBody>
         <TableHeader>
           <TableRow>
-            <TableHead>Teléfono de Sabo Motors</TableHead>
+            <TableHead className="text-gray-800">
+              Teléfono de Sabo Motors
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
