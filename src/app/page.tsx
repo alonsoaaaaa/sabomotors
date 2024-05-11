@@ -7,7 +7,7 @@ import { AvailableCars } from "@prisma/client";
 import VehicleDisplay from "@/components/vehicle-display";
 import { useEffect, useState } from "react";
 import { FetchAvailableCars } from "./actions/actions";
-import FilterNavbar from "@/components/filtering-navbar";
+// import FilterNavbar from "@/components/filtering-navbar";
 
 function VehicleCatalog() {
   let [cars, setCars] = useState<AvailableCars[]>([]);
