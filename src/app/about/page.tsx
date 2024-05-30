@@ -19,7 +19,7 @@ function About() {
       <Header />
       <div
         className={mainClasses + totalClasses}
-        style={{ backgroundImage: `url(/localsabomotors.jpg)` }}
+        style={{ backgroundImage: `url(/localsabomotors.png)` }}
       >
         <div className="flex flex-col mt-8 gap-3">
           <h1 className="font-sans text-3xl sm:text-5xl font-bold text-center text-blue-500">

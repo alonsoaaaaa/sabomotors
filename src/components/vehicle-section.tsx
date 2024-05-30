@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
-//TODO: Setup google analytics correctly
 function VehicleSection({
   id,
   imageSrc,
@@ -25,7 +24,7 @@ function VehicleSection({
       <div className="flex flex-col grow text-sm leading-5 text-black max-md:mt-10">
         <Image
           priority
-          src={imageSrc[0]}
+          src={imageSrc?.[0]}
           alt="Vehicle"
           className="self-center w-full aspect-[1.49] max-w-[300px] rounded-md"
           width={300}

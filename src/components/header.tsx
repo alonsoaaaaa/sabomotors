@@ -18,7 +18,9 @@ function Header() {
               width={100}
               height={100}
             />
-            <h1 className="font-bold text-base text-center">Ixtapaluca</h1>
+            <h1 className="font-bold text-base text-center text-white">
+              IXTAPALUCA
+            </h1>
           </Link>
         </div>
 
@@ -63,7 +65,7 @@ function Header() {
               height={30}
               className="self-center aspect-square"
             />
-            <div className="mt-1.5">Ubicación</div>
+            <div className="mt-1.5 ">Ubicación</div>
           </Link>
           <Link
             href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
@@ -77,7 +79,7 @@ function Header() {
               height={30}
               className="self-center aspect-square"
             />
-            <div className="mt-1.5">Redes</div>
+            <div className="mt-1.5 ">Redes</div>
           </Link>
         </div>
       </div>
