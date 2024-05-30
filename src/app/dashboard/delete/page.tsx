@@ -43,7 +43,7 @@ export default function DeleteAvailableCar() {
       <h1 className="text-2xl text-center py-2 text-red-400">
         Borrar carro en venta
       </h1>
-      <NavBar carMake={carMake} setCarMake={setCarMake} />
+      {/* <NavBar carMake={carMake} setCarMake={setCarMake} /> */}
       <div className="flex flex-row flex-wrap justify-center md:justify-start mx-[3%]">
         {cars.map(
           (car) =>
