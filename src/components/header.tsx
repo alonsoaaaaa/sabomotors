@@ -7,7 +7,6 @@ const navItems = ["lupa.svg", "ubicacion.svg", "hablando.svg"];
 function Header() {
   return (
     <header className="flex flex-col px-5 pt-2 pb-2 w-full text-blue-200 bg-gray-800 shadow-sm">
-      {/* <nav className="flex justify-center mt-2.5 w-full text-center max-md:flex-wrap max-md:max-w-full sm:justify-between"> */}
       <div className="flex flex-col sm:flex-row justify-start gap-1 sm:gap-5 text-sm font-bold leading-4 max-md:flex-wrap">
         <div className="self-center">
           <Link href={"/"}>
@@ -37,6 +36,12 @@ function Header() {
               VÉNDENOS TU COCHE
             </Button>
           </Link>
+          <Link className="text-center" href={"/stories"}>
+            {" "}
+            <Button variant="link" className="text-white text-large py-1">
+              NUESTRAS HISTORIAS
+            </Button>
+          </Link>
           <Link className="text-center" href={"/contact"}>
             {" "}
             <Button variant="link" className="text-white text-large py-1">
@@ -58,7 +63,7 @@ function Header() {
             className="flex flex-col px-2 self-center"
           >
             <Image
-              src={navItems[1]}
+              src={"/address.svg"}
               priority
               alt="ubicacion"
               width={30}
@@ -67,7 +72,37 @@ function Header() {
             />
             <div className="mt-1.5 ">Ubicación</div>
           </Link>
+
           <Link
+            href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
+            className="flex flex-col px-2 self-center"
+          >
+            <Image
+              src={"/facebook.svg"}
+              priority
+              alt="ubicacion"
+              width={30}
+              height={30}
+              className="self-center aspect-square"
+            />
+            <div className="mt-1.5 ">Facebook</div>
+          </Link>
+          <Link
+            href={"https://www.instagram.com/seminuevossabomotors/"}
+            className="flex flex-col px-2 self-center"
+          >
+            <Image
+              src={"/instagram.svg"}
+              priority
+              alt="ubicacion"
+              width={30}
+              height={30}
+              className="self-center aspect-square text-white"
+            />
+            <div className="mt-1.5 ">Instagram</div>
+          </Link>
+
+          {/* <Link
             href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
             className="flex flex-col px-2"
           >
@@ -80,7 +115,7 @@ function Header() {
               className="self-center aspect-square"
             />
             <div className="mt-1.5 ">Redes</div>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {/* </nav> */}

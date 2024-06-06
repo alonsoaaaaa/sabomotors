@@ -29,7 +29,7 @@ export default function DeleteAvailableCar() {
     });
     setCars(cars.filter((car) => car.id !== id));
   };
-
+  //web institucional => app de kavak y por que fb es una alternativa => grupos de facebook y su automatizacion de respuestas
   let [carMake, setCarMake] = useState("Disponibles");
   console.log(carMake);
   return (

@@ -91,6 +91,25 @@ function VehicleDetailsSection({
         <TableHeader>
           <TableRow>
             <TableHead className="text-gray-800">
+              WhatsApp de Sabo Motors
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>
+              <a
+                href="https://wa.me/c/5215516416497 "
+                className="text-blue-400 underline underline-offset-4"
+              >
+                Contactar
+              </a>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-gray-800">
               Correo de Sabo Motors
             </TableHead>
           </TableRow>
@@ -103,25 +122,6 @@ function VehicleDetailsSection({
                 className="text-blue-400 underline underline-offset-4"
               >
                 ventas@seminuevossabomotors.com
-              </a>
-            </TableCell>
-          </TableRow>
-        </TableBody>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="text-gray-800">
-              Teléfono de Sabo Motors
-            </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableCell>
-              <a
-                href="tel:+525516416497"
-                className="text-blue-400 underline underline-offset-4"
-              >
-                55 1641 6497
               </a>
             </TableCell>
           </TableRow>

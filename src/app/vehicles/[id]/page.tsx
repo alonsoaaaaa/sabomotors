@@ -40,22 +40,6 @@ export default function Page() {
           );
         }
       })}
-      <h1 className="text-pretty font-bold text-teal-400">Visitanos: </h1>
-      {/* <video width="640" height="360" loop autoPlay muted preload="none">
-        <source src="/video-desk.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-      <video
-        width="300"
-        className="border border-double "
-        height="300"
-        autoPlay
-        loop
-        preload="none"
-      >
-        <source src="/tiktok.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
     </div>
   );
 }

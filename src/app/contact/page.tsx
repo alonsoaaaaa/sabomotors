@@ -6,7 +6,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <div className="flex flex-col gap-14 pt-5 bg-gradient-to-t from-blue-700 to-blue-200">
+      <div className="flex flex-col gap-14 pt-5 bg-gradient-to-t from-blue-700 to-blue-200 min-h-screen justify-center">
         <div className="flex pl-[9%] justify-center">
           <Image
             width={300}

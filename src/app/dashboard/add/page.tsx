@@ -1,5 +1,6 @@
 "use client";
-import { set, useForm } from "react-hook-form"; //react hook form is used in client components to handle forms
+
+import { useForm } from "react-hook-form"; //react hook form is used in client components to handle forms
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,7 +16,9 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import createImageUrl from "@/libs/create-imageurl";
 import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/libs/utils";
+import { popularMakes, popularModelsOfMakes } from "@/utils/data";
 
 function AddPage() {
   const {
@@ -34,6 +37,8 @@ function AddPage() {
   const [imageError, setImageError] = useState(null as string | null);
   const insuranceRef = useRef(null);
   insuranceRef.current = watch("insurance");
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   const handleImageSubmit = async (image: any) => {
     try {
@@ -88,18 +93,34 @@ function AddPage() {
         <CardContent>
           <div className="grid gap-4">
             <div className="grid gap-2">
+              <Label>Marca</Label>
+              <select
+                {...register("make", {
+                  required: {
+                    value: true,
+                    message: "Coloque la marca",
+                  },
+                })}
+                defaultValue={"Chevrolet"}
+              >
+                {popularMakes.map((make) => (
+                  <option key={make} value={make}>
+                    {make}
+                  </option>
+                ))}
+              </select>
+              {errors.make && (
+                <span className="text-red-500">
+                  {errors.make.message as string}
+                </span>
+              )}
+            </div>
+            <div className="grid gap-2">
               <Label>Modelo</Label>
               <Input
                 placeholder=""
                 {...register("model", {
-                  required: {
-                    value: true,
-                    message: "Coloque el modelo",
-                  },
-                  minLength: {
-                    value: 3,
-                    message: "El modelo debe tener al menos 3 caracteres",
-                  },
+                  required: { value: true, message: "Coloque el modelo" },
                 })}
               />
               {errors.model && (
@@ -108,27 +129,7 @@ function AddPage() {
                 </span>
               )}
             </div>
-            <div className="grid gap-2">
-              <Label>Marca</Label>
-              <Input
-                placeholder=""
-                {...register("make", {
-                  required: {
-                    value: true,
-                    message: "Coloque la marca",
-                  },
-                  minLength: {
-                    value: 3,
-                    message: "La marca debe tener al menos 3 caracteres",
-                  },
-                })}
-              />
-              {errors.make && (
-                <span className="text-red-500">
-                  {errors.make.message as string}
-                </span>
-              )}
-            </div>
+
             <div className="grid gap-2">
               <Label>Año</Label>
               <Input
@@ -354,5 +355,47 @@ function AddPage() {
     </Card>
   );
 }
-
+{
+  /* <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className="w-[200px] justify-between"
+        >
+          {value
+            ? frameworks.find((framework) => framework.value === value)?.label
+            : "Select framework..."}
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[200px] p-0">
+        <Command>
+          <CommandInput placeholder="Search framework..." />
+          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandGroup>
+            {frameworks.map((framework) => (
+              <CommandItem
+                key={framework.value}
+                value={framework.value}
+                onSelect={(currentValue) => {
+                  setValue(currentValue === value ? "" : currentValue)
+                  setOpen(false)
+                }}
+              >
+                <Check
+                  className={cn(
+                    "mr-2 h-4 w-4",
+                    value === framework.value ? "opacity-100" : "opacity-0"
+                  )}
+                />
+                {framework.label}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+        </Command>
+      </PopoverContent>
+    </Popover> */
+}
 export default AddPage;
