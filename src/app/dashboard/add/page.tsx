@@ -216,8 +216,8 @@ function AddPage() {
                 placeholder=""
                 {...register("downpayment", {
                   required: {
-                    value: true,
-                    message: "Coloque el enganche",
+                    value: false,
+                    message: "Coloque el enganche (vacio si no aplica)",
                   },
                   pattern: {
                     value: /^[0-9]*$/i,
