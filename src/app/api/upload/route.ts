@@ -19,13 +19,12 @@ export async function POST(req: Request) {
     }
     const bucketParams = {
       Bucket: "sabomotorsmedia",
-      Key: `${image.name}-${uuid()}.${fileExtension}`,
+      Key: `${image.name + "SM"}-${uuid()}.${fileExtension}`,
       Body: buffer,
       ACL: ObjectCannedACL.public_read,
     };
     const result = await s3Client.send(new PutObjectCommand(bucketParams));
     console.log(result);
-    //TODO: After uploading the image to the database, we can fetch it and put the url in an image tag in the frontend
     return NextResponse.json({
       imageUrl: `https://sabomotorsmedia.nyc3.digitaloceanspaces.com/${bucketParams.Key}`,
     });

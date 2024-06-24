@@ -30,6 +30,11 @@ function Dashboard() {
       <Link href="/">
         <Button variant="ghost">Ver Catálogo Existente</Button>
       </Link>
+      <Link href="/dashboard/analyze">
+        <Button className="bg-blue-500 hover:bg-blue-400">
+          Analizar oferta
+        </Button>
+      </Link>
       {/* logout */}
       <Button variant="destructive" onClick={() => signOut()}>
         Cerrar Sesión
