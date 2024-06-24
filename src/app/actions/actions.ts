@@ -20,8 +20,8 @@ export async function createChatStream(
     project: projectId,
     location: location,
     googleAuthOptions: {
-      keyFilename:
-        "C:\\Users\\52551\\Desktop\\proyectos\\omodacars\\src\\ornate-ray-424712-r8-14ad3c627e2a.json", //NOTA: cambiar esto por tempFilePath en produccion
+      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON,
+      // "C:\\Users\\52551\\Desktop\\proyectos\\omodacars\\src\\ornate-ray-424712-r8-14ad3c627e2a.json", //NOTA: cambiar esto por tempFilePath en produccion
       scopes: ["https://www.googleapis.com/auth/cloud-platform"],
     },
   });
@@ -31,7 +31,7 @@ export async function createChatStream(
   const generativeVisionModel = vertexAI.getGenerativeModel({
     model: model,
     generationConfig: {
-      temperature: 0,
+      temperature: 0.8,
       maxOutputTokens: 200,
     },
     systemInstruction:
