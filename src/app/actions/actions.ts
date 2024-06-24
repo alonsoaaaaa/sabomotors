@@ -20,7 +20,7 @@ export async function createChatStream(
     project: projectId,
     location: location,
     googleAuthOptions: {
-      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON,
+      keyFilename: tempFilePath,
       // "C:\\Users\\52551\\Desktop\\proyectos\\omodacars\\src\\ornate-ray-424712-r8-14ad3c627e2a.json", //NOTA: cambiar esto por tempFilePath en produccion
       scopes: ["https://www.googleapis.com/auth/cloud-platform"],
     },
