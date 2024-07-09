@@ -23,8 +23,8 @@ async function AddStoryPage() {
         <h1 className="font-bold">Subir historia</h1>
         <Input
           type="text"
-          placeholder="url:https://www.facebook.com/seminuevossabomotors/videos/etc"
-          className="w-fit"
+          placeholder="Ej:https://www.facebook.com/seminuevossabomotors/videos/..."
+          className="w-[90vw]"
           name="story"
           id="facebook-url"
         />
