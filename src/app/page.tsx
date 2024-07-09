@@ -9,12 +9,14 @@ import VehicleDisplay from "@/components/vehicle-display";
 import { useEffect, useState } from "react";
 import { FetchAvailableCars } from "./actions/actions";
 import { FilterProvider } from "@/context/filter-context";
+// import testConnection from "./actions/test-connection";
 // import FilterNavbar from "@/components/filtering-navbar";
 
 function VehicleCatalog() {
   let [cars, setCars] = useState<AvailableCars[]>([]);
   useEffect(() => {
     const fetchAndSetCars = async () => {
+      // await testConnection();
       const carsData = await FetchAvailableCars();
       setCars(carsData);
     };

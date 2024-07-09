@@ -35,6 +35,11 @@ function Dashboard() {
           Analizar oferta
         </Button>
       </Link>
+      <Link href="/dashboard/story">
+        <Button className="bg-purple-500 hover:bg-purple-400">
+          Añadir historia
+        </Button>
+      </Link>
       {/* logout */}
       <Button variant="destructive" onClick={() => signOut()}>
         Cerrar Sesión

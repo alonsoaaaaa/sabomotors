@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
 const tempFilePath = path.join(__dirname, "google-credentials.json"); //esto se hace para que railway pueda leer la variable
-fs.writeFileSync(tempFilePath, credentialsJson!); //NOTA: En local podemos leerlo desde el archivo, en produccion tenemos que hacer esto
+// fs.writeFileSync(tempFilePath, credentialsJson!); //NOTA: En local podemos leerlo desde el archivo, en produccion tenemos que hacer esto
 import { VertexAI, Part } from "@google-cloud/vertexai";
 
 export async function createChatStream(
@@ -20,8 +20,9 @@ export async function createChatStream(
     project: projectId,
     location: location,
     googleAuthOptions: {
-      keyFilename: tempFilePath,
-      // "C:\\Users\\52551\\Desktop\\proyectos\\omodacars\\src\\ornate-ray-424712-r8-14ad3c627e2a.json", //NOTA: cambiar esto por tempFilePath en produccion
+      // keyFilename: tempFilePath,
+      keyFilename:
+        "C:\\Users\\52551\\Desktop\\proyectos\\omodacars\\src\\ornate-ray-424712-r8-14ad3c627e2a.json", //NOTA: cambiar esto por tempFilePath en produccion
       scopes: ["https://www.googleapis.com/auth/cloud-platform"],
     },
   });
@@ -81,6 +82,22 @@ export async function FetchCarOffers() {
 export async function FetchAvailableCars() {
   const vehicles = await prisma.availableCars.findMany();
   return vehicles;
+}
+
+export async function submitStory(formUrl: FormData) {
+  let url = formUrl.get("story");
+  const post = await prisma.PostLinks.create({
+    data: {
+      url,
+    },
+  });
+  // const deletePost = await prisma.PostLinks.delete({
+  //   where: {
+  //     id: 1,
+  //   },
+  // });
+  // console.log(formUrl);
+  console.log("POST", post);
 }
 
 ("Acura, Alfa Romeo, Audi, Baic, BMW, BYD, Cadillac, Changan, Chevrolet, Chirey, Chrysler, Cupra, Dfesk, Dodge, Faw-Giant, Fiat, Ford, GMC, Geely, GWM, Hyundai, Infiniti, Jac, Jaguar, Jeep, JMC, Jetour, Kia, Land Rover, Lexus, Lincoln, MG, Mini, Mitsubishi, Nissan, Omoda, Peugeot, Porsche, Renault, Seat, Smart, Subaru, Suzuki, Tesla, Toyota, Volkswagen.");

@@ -1,7 +1,10 @@
 import React from "react";
-import { storiesLinks } from "@/utils/data";
+// import { storiesLinks } from "@/utils/data";
+import prisma from "@/libs/db";
 import Header from "@/components/header";
 async function StoriesPage() {
+  let storiesLinks = await prisma.PostLinks.findMany();
+  console.log("STORIES LINK", storiesLinks);
   return (
     <div>
       <Header />
@@ -15,12 +18,12 @@ async function StoriesPage() {
           src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
         ></script>
 
-        {storiesLinks.map((link) => {
+        {storiesLinks.map((link: any) => {
           return (
-            <div key={link} className="m-4">
+            <div key={link.url} className="m-4">
               <iframe
                 src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(
-                  link
+                  link.url
                 )}&show_text=false`}
                 width="400"
                 height="800"
