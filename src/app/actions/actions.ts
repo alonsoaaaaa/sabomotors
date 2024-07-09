@@ -6,6 +6,7 @@ const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
 const tempFilePath = path.join(__dirname, "google-credentials.json"); //esto se hace para que railway pueda leer la variable
 // fs.writeFileSync(tempFilePath, credentialsJson!); //NOTA: En local podemos leerlo desde el archivo, en produccion tenemos que hacer esto
 import { VertexAI, Part } from "@google-cloud/vertexai";
+import { revalidatePath } from "next/cache";
 
 export async function createChatStream(
   question: string,
@@ -91,13 +92,18 @@ export async function submitStory(formUrl: FormData) {
       url,
     },
   });
-  // const deletePost = await prisma.PostLinks.delete({
-  //   where: {
-  //     id: 1,
-  //   },
-  // });
-  // console.log(formUrl);
+  revalidatePath("/dashboard/story");
+  // window.location.reload();
   console.log("POST", post);
+}
+export async function deleteStory(id: number) {
+  const deletePost = await prisma.PostLinks.delete({
+    where: {
+      id,
+    },
+  });
+  revalidatePath("/dashboard/story");
+  console.log(deletePost);
 }
 
 ("Acura, Alfa Romeo, Audi, Baic, BMW, BYD, Cadillac, Changan, Chevrolet, Chirey, Chrysler, Cupra, Dfesk, Dodge, Faw-Giant, Fiat, Ford, GMC, Geely, GWM, Hyundai, Infiniti, Jac, Jaguar, Jeep, JMC, Jetour, Kia, Land Rover, Lexus, Lincoln, MG, Mini, Mitsubishi, Nissan, Omoda, Peugeot, Porsche, Renault, Seat, Smart, Subaru, Suzuki, Tesla, Toyota, Volkswagen.");
