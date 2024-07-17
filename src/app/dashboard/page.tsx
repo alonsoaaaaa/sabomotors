@@ -32,7 +32,7 @@ function Dashboard() {
       </Link>
       <Link href="/dashboard/analyze">
         <Button className="bg-blue-500 hover:bg-blue-400">
-          Analizar oferta
+          Analizar Oferta
         </Button>
       </Link>
       <Link href="/dashboard/story">
