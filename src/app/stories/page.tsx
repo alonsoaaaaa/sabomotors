@@ -18,7 +18,7 @@ async function StoriesPage() {
           src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
         ></script>
 
-        {storiesLinks.map((link: any) => {
+        {storiesLinks.map((link: { url: string }) => {
           return (
             <div key={link.url} className="m-4">
               <iframe
