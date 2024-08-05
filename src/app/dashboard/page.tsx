@@ -14,6 +14,11 @@ function Dashboard() {
           Añadir nuevo coche
         </Button>
       </Link>
+      <Link href="/dashboard/edit">
+        <Button className="bg-green-500 hover:bg-green-400">
+          Editar publicación de coche
+        </Button>
+      </Link>
       <Link href="/dashboard/delete">
         <Button
           variant="destructive"
