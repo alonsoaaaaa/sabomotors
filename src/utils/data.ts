@@ -1,6 +1,7 @@
 export const popularMakes = [
   "Acura",
   "Audi",
+  "BMW",
   "Chirey",
   "Chrysler",
   "Citroen",
