@@ -72,7 +72,6 @@ function Header() {
             />
             <div className="mt-1.5 ">Ubicación</div>
           </Link>
-
           <Link
             href={"https://www.facebook.com/seminuevossabomotors/?locale=es_LA"}
             className="flex flex-col px-2 self-center"

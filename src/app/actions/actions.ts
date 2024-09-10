@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
 const tempFilePath = path.join(__dirname, "google-credentials.json"); //esto se hace para que railway pueda leer la variable
-fs.writeFileSync(tempFilePath, credentialsJson!); //NOTA: En local podemos leerlo desde el archivo, en produccion tenemos que hacer esto
+// fs.writeFileSync(tempFilePath, credentialsJson!); //NOTA: En local podemos leerlo desde el archivo, en produccion tenemos que hacer esto
 import { VertexAI, Part } from "@google-cloud/vertexai";
 import { revalidatePath } from "next/cache";
 
